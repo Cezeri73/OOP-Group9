@@ -1,8 +1,11 @@
 🎯 CENG201 - OOP Project
-Welcome to our Object-Oriented Programming (OOP) project repository, developed as part of the CENG201 course at Ankara Yıldırım Beyazıt University. This project demonstrates key OOP concepts using C++.
+Welcome to our Object-Oriented Programming (OOP) project repository
+developed as part of the CENG201 course at Ankara Yıldırım Beyazıt University.
+This project demonstrates key OOP concepts using C++.
 
 🚀 Project Overview
-In this project, we designed and implemented a [insert brief description of the project] using fundamental OOP principles such as:
+In this project, we designed and implemented a 
+[description of the project] using fundamental OOP principles such as:
 
 Encapsulation
 Inheritance
