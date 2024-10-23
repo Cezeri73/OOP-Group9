@@ -10,16 +10,16 @@ such as lights, thermostats, and security cameras. The system allows users
 to monitor and control these devices remotely.
 
 ## Key Features
-Device Control: Users can turn devices on/off and set timers.
-Monitoring: Devices send alerts, such as motion detection alerts 
-from security cameras.Observer Pattern: Devices send notifications 
-when they detect changes (e.g., motion detected).
-Factory Pattern: Used to instantiate different types of smart devices dynamically.
-MVC Pattern: Separates device logic (Model), control logic (Controller), and the user interface (View) to enhance modularity and maintainability.
+### Device Control: Users can turn devices on/off and set timers.
+### Monitoring: Devices send alerts, such as motion detection alerts 
+from security cameras.
+### Observer Pattern: Devices send notifications when they detect changes (e.g., motion detected).
+### Factory Pattern: Used to instantiate different types of smart devices dynamically.
+### MVC Pattern: Separates device logic (Model), control logic (Controller), and the user interface (View) to enhance modularity and maintainability.
 ## 🛠️ Technologies Used
-Language: C++
-IDE: [Visual Studio / CLion / Code::Blocks / etc.]
-Version Control: Git & GitHub
+### Language: C++
+### IDE: [Visual Studio / CLion / Code::Blocks / etc.]
+### Version Control: Git & GitHub
 ## 👥 Collaborators
 Furkan Cem Çelik - 23050151020
 Zekeriya Damcı - 22050111074
