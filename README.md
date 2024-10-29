@@ -17,7 +17,7 @@ In this project, we designed and implemented a **Smart Home Automation System**,
 ## 🛠️ Technologies Used
 
 - **Language:** C++
-- **IDE:** [Visual Studio / CLion / Code::Blocks / etc.]
+- **IDE:** [Visual Studio / CLion / Code::Blocks / Vim / etc.]
 - **Version Control:** Git & GitHub
 
 ## 👥 Collaborators
