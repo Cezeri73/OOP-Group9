@@ -3,11 +3,10 @@ CXXFLAGS = -I/usr/local/include -I/usr/local/include/FL/images -I/usr/local/incl
 LDFLAGS = -L/usr/local/lib -lfltk -pthread -lpthread -lm -lX11
 TARGET = smart_home
 
-SRC = main.cpp SmartDevice.cpp Curtain.cpp Light.cpp NotificationSystem.cpp SmartDeviceFactory.cpp Controller.cpp View.cpp
+SRC = main.cpp SmartDevice.cpp Room.cpp MainWindow.cpp
 OBJ = $(SRC:.cpp=.h)
 
 all: $(TARGET)
 
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)
-	

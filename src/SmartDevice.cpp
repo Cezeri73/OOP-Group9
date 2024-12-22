@@ -1,13 +1,7 @@
 #include "SmartDevice.h"
 
-SmartDevice::SmartDevice(const std::string& deviceName) : name(deviceName), status(false) {}
+SmartDevice::SmartDevice(int id,std::string name):id(id),name(name){};
 
-void SmartDevice::addObserver(Observer* observer) {
-    observers.push_back(observer);
-}
-
-void SmartDevice::notifyObservers(const std::string& message) {
-    for (Observer* observer : observers) {
-        observer->update(message);
-    }
+bool SmartDevice::operator==(const SmartDevice& other){
+	return id == other.id;
 }
