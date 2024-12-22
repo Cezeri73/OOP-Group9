@@ -21,4 +21,3 @@ void MainWindow::updateButtons(){
         }
 	this->redraw();
 }
-

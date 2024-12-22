@@ -1,12 +1,24 @@
-#pragma once
-#include <iostream>
+#ifndef SMART_DEVICE_H
+#define SMART_DEVICE_H
+
 #include <string>
-class SmartDevice{
-	private:
-		int id;
-	public:
-		std::string name;
-		SmartDevice(int,std::string);
-		//virtual void showDeviceInfo();
-		bool operator==(const SmartDevice& other);
+#include <iostream>
+class SmartDevice {
+protected:
+    std::string name;
+    std::string status; // ON veya OFF durumunu belirtir
+
+public:
+    SmartDevice(std::string deviceName)
+        : name(deviceName), status("OFF") {}
+
+    virtual ~SmartDevice() = default;
+
+    const char* getName(){
+        	return name.c_str();
+    }
+    
+    virtual std::string getStatus() const = 0; // Saf sanal metod
 };
+
+#endif // SMART_DEVICE_H
