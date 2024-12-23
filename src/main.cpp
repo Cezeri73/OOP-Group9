@@ -4,7 +4,7 @@
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Text_Display.H>
 #include <FL/Fl_Input.H>
-#include <FL/Fl_JPEG_Image.H>
+
 #include <fstream>
 #include <string>
 #include <iostream>
