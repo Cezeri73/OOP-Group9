@@ -8,7 +8,7 @@ Thermostat::Thermostat(const std::string& deviceName, int initialTemp = 22)
 	}
 void Thermostat::setTemperature(int temp) {
        	temperature = temp;
-        status = "ON"; // Sıcaklık ayarlandığında durumu ON yap
+        statu= Statu::ON; // Sıcaklık ayarlandığında durumu ON yap
     }
 int Thermostat::getTemperature() const {
         return temperature;
@@ -52,5 +52,9 @@ void Thermostat::deviceCallback(Fl_Widget* widget ,void* data ){
     thermoWindow->show();
 };
 std::string Thermostat::getStatus() const{
-        return "Thermostat is " + status + ", Temperature: " + std::to_string(temperature) + "°C";
+        if(statu==Statu::ON){
+            return "Thermostat is on, Temperature: " + std::to_string(temperature) + "°C";
+        }
+        return "Thermostat is off, Temperature: " + std::to_string(temperature) + "°C";
+
 }

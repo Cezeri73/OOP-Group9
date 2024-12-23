@@ -19,11 +19,11 @@ void Light::deviceCallback(Fl_Widget* widget, void* data) {
     button->redraw(); // Butonu güncelle
 }
 void Light::turnOn() {
-    status = "ON";
+    statu = Statu::ON;
 }
 
 void Light::turnOff() {
-    status = "OFF";
+    statu = Statu::OFF;
 }
 
 Light::Light(const std::string& deviceName): SmartDevice(deviceName) {
@@ -34,5 +34,5 @@ void Light::adjustBrightness(int level) {
         brightness = (level >= 0 && level <= 100) ? level : brightness;
 }
 std::string Light::getStatus() const{
-	return std::string((status == "ON") ? "ON" : "OFF") + ", Brightness: " + std::to_string(brightness) + "%";
+	return std::string((statu == Statu::ON) ? "ON" : "OFF") + ", Brightness: " + std::to_string(brightness) + "%";
 }

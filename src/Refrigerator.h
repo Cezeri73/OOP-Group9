@@ -15,6 +15,7 @@ void deviceCallback(Fl_Widget*,void*) override;
     void checkStock() ;
     void adjustStock(int amount) ;
     int getStockLevel() const ;
+    std::string status;
     std::string getStatus() const override ;
 };
 

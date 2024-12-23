@@ -13,11 +13,6 @@ void Elevator::deviceCallback(Fl_Widget* widget,void* data) {
     } else {
         addNotification("Elevator is functioning well.");
     }
-
-
-
-
-
 };
     bool Elevator::isMaintenanceRequired() const {
         return maintenanceRequired;
