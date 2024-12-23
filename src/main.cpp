@@ -4,12 +4,13 @@
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Text_Display.H>
 #include <FL/Fl_Input.H>
-
+#include <FL/Fl_JPEG_Image.H>
 #include <fstream>
 #include <string>
 #include <iostream>
 #include <vector>
-
+#include <chrono>
+#include <thread>
 #include "SmartHomeSystem.h"
 #include "Light.h"
 #include "Thermostat.h"
@@ -65,10 +66,6 @@ int main() {
 	saloon.addDevice(purifier);
 	saloon.addDevice(elevator);
 	saloon.addDevice(fridge);
-
-	window.addRoom(kitchen);
-	window.addRoom(saloon);
-
 	
 	Fl_Text_Display* notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
     	Fl_Text_Buffer* notificationBuffer = SmartDevice::notificationBuffer;
@@ -79,6 +76,8 @@ int main() {
     	notificationDisplay->textcolor(FL_WHITE); // Yazı beyaz
 	
 	window.show();
+
+
 	return Fl::run();
 }
 

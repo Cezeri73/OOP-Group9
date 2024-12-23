@@ -1,16 +1,19 @@
 #pragma once
 
+#include <chrono>
+#include <thread>
 #include <iostream>
 #include "Room.h"
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Button.H>
 #include <vector>
 #include <algorithm>
+#include "AddRoomScreen.h"
 class MainWindow : public Fl_Window{
 	private:
-		std::vector<Room> rooms;
-		void updateButtons();
+		static AddRoomScreen addRoomScreen;	
+		Fl_Button* addRoomButton;
 	public:
-		MainWindow(int,int,const char*);
-		void addRoom(Room&);
+		void updateButtons();
+	       	MainWindow(int,int,const char*);
 };

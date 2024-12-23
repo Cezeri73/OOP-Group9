@@ -16,7 +16,8 @@ class Room{
 	private:
 		std::vector<SmartDevice*> devices;
 	public:
-		std::string roomName;
+		static std::vector<Room*> allRooms;	
+	        std::string roomName;
 		Room(std::string);
 		void showRoom();
 		void addDevice(SmartDevice*);

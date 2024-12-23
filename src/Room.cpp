@@ -1,7 +1,9 @@
 #include "Room.h"
+std::vector<Room*> Room::allRooms;
 
-
-Room::Room(std::string name):roomName(name){};
+Room::Room(std::string name):roomName(name){
+	allRooms.push_back(this);
+};
 
 void Room::showRoom(){
 	std::string name = roomName;
