@@ -9,21 +9,14 @@ private:
     bool maintenanceRequired; // Asansörün bakıma ihtiyacı olup olmadığını belirten bayrak
 
 public:
-    Elevator(const std::string& deviceName)
-        : SmartDevice(deviceName), maintenanceRequired(false) {}
+    Elevator(const std::string& deviceName);
 
-    void checkMaintenance() {
-        // Rastgele bir değer ile bakım durumunu kontrol et
-        maintenanceRequired = (std::rand() % 2 == 0);
-    }
+    void checkMaintenance();
+void deviceCallback(Fl_Widget*,void*) override;
 
-    bool isMaintenanceRequired() const {
-        return maintenanceRequired;
-    }
+    bool isMaintenanceRequired() const;
 
-    std::string getStatus() const override {
-        return "Elevator Status: " + std::string(maintenanceRequired ? "Maintenance Required" : "Operational");
-    }
+    std::string getStatus() const override;
 };
 
 #endif // ELEVATOR_H

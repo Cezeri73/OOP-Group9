@@ -6,30 +6,14 @@
 
 class SecurityCamera : public SmartDevice {
 private:
-    bool isRecording; // Kameranın kayıt yapıp yapmadığını belirtir
-
+    	bool isRecording; 
 public:
-    SecurityCamera(const std::string& deviceName)
-        : SmartDevice(deviceName), isRecording(false) {}
-
-    void startRecording() {
-        isRecording = true;
-        status = "ON"; // Kameranın durumu açık (ON) olarak güncellenir
-    }
-
-    void stopRecording() {
-        isRecording = false;
-        status = "OFF"; // Kameranın durumu kapalı (OFF) olarak güncellenir
-    }
-
-    bool isRecordingActive() const {
-        return isRecording;
-    }
-
-    std::string getStatus() const override {
-        std::string recordingStatus = isRecording ? "Yes" : "No";
-        return "Status: " + status + ", Recording: " + recordingStatus;
-    }
+	SecurityCamera(const std::string& deviceName);
+	void startRecording();
+	void deviceCallback(Fl_Widget*,void*) override;
+    	void stopRecording();
+    	bool isRecordingActive() const;
+    	std::string getStatus() const override;
 };
 
 #endif // SECURITYCAMERA_H

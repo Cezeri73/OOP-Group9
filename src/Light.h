@@ -9,26 +9,12 @@ private:
     int brightness;
 
 public:
-void turnOn() {
-    status = "ON";
-}
-
-void turnOff() {
-    status = "OFF";
-}
-
-
-    Light(const std::string& deviceName, int initialBrightness = 70)
-        : SmartDevice(deviceName), brightness(initialBrightness) {}
-        
-
-    void adjustBrightness(int level) {
-        brightness = (level >= 0 && level <= 100) ? level : brightness;
-    }
-
-    std::string getStatus() const override {
-        return std::string((status == "ON") ? "ON" : "OFF") + ", Brightness: " + std::to_string(brightness) + "%";
-    }
+	void turnOn();
+	void turnOff();
+	Light(const std::string&);
+        void adjustBrightness(int level);
+	void deviceCallback(Fl_Widget*,void*) override;
+    	std::string getStatus() const override;
 };
 
 #endif // LIGHT_H
