@@ -5,7 +5,7 @@ SecurityCamera::SecurityCamera(const std::string& deviceName): SmartDevice(devic
 }
 void SecurityCamera::startRecording() {
         isRecording = true;
-        status = "ON";
+        statu = Statu::ON;
 }
 void SecurityCamera::deviceCallback(Fl_Widget* widget,void* data){
    	SecurityCamera* camera = static_cast<SecurityCamera*>(data);
@@ -19,12 +19,18 @@ void SecurityCamera::deviceCallback(Fl_Widget* widget,void* data){
 }
 
 void SecurityCamera::stopRecording(){
-	status = "OFF";
+	statu = Statu::OFF;
 }
-    	bool SecurityCamera::isRecordingActive()const{
+
+bool SecurityCamera::isRecordingActive()const{
 		return isRecording;
-	}
-    	std::string SecurityCamera::getStatus() const{
-	       return status;
-	}	       
+}
+std::string SecurityCamera::getStatus() const{
+	    if(statu == Statu::ON){
+			return "ON";
+		}
+		else{
+			return "OFF";
+		}
+}	       
 

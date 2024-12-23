@@ -12,15 +12,21 @@
 #include <FL/Fl_Text_Buffer.H>
 
 class SmartDevice {
+    
 protected:
+    enum class Statu {
+        ON,
+        OFF
+    };
     	std::string name;
-    	std::string status; 
+    	Statu statu;
 public:
+    
 	static Fl_Text_Buffer* notificationBuffer; 
         //static std::ofstream logFile("notifications.log", std::ios::app);
 public:
     SmartDevice(std::string deviceName)
-        : name(deviceName), status("OFF") {}
+        : name(deviceName), statu(Statu::OFF) {}
 
     virtual ~SmartDevice() = default;
 

@@ -3,11 +3,11 @@
 Curtain::Curtain(const std::string& deviceName)
         : SmartDevice(deviceName) {}
 
-void Curtain::openCurtain() {
-        status = "ON"; // Perde açık
+void Curtain::openCurtain(){
+       statu = Statu::ON;
 }
 void Curtain::closeCurtain() {
-        status = "OFF"; // Perde kapalı
+        statu = Statu::OFF; 
 }
 void Curtain::deviceCallback(Fl_Widget* widget,void* data) {
 	Curtain* curtain = static_cast<Curtain*>(data);
@@ -20,7 +20,12 @@ void Curtain::deviceCallback(Fl_Widget* widget,void* data) {
     	}
 }	
 std::string Curtain::getStatus() const{
-       return status;
+      if(statu==Statu::ON){
+		return "Open";
+	  }
+	  else{
+		return "Closed";
+	  }
 }       
 
 
