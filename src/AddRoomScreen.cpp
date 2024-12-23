@@ -22,7 +22,7 @@ void AddRoomScreen::login_cb(Fl_Widget *widget, void *data) {
 
 void AddRoomScreen::handle_login() {
 	std::string roomNameStr = roomName->value();
-	Room roomToAdd(roomNameStr);
+	Room* roomToAdd = new Room(roomNameStr);
 	std::cout<<roomNameStr;
 	window->hide();
 }

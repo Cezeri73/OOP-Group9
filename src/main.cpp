@@ -21,6 +21,7 @@
 #include "LoginScreen.h"
 #include "Refrigerator.h"
 #include "MainWindow.h"
+#include "AddDeviceScreen.h"
 
 /*void checkAlerts() {
     Refrigerator* fridge = dynamic_cast<Refrigerator*>(homeSystem.getDevice("Kitchen Refrigerator"));
@@ -56,7 +57,7 @@ int main() {
         SmartDevice* elevator = new Elevator("Home Elevator");
         SmartDevice* fridge = new Refrigerator("Kitchen Refrigerator", 8);	
 
-	Room kitchen("Kitchen");
+	/*Room kitchen("Kitchen");
 	Room saloon("Saloon");
 
 	kitchen.addDevice(light);
@@ -66,7 +67,7 @@ int main() {
 	saloon.addDevice(purifier);
 	saloon.addDevice(elevator);
 	saloon.addDevice(fridge);
-	
+	*/
 	Fl_Text_Display* notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
     	Fl_Text_Buffer* notificationBuffer = SmartDevice::notificationBuffer;
     	notificationDisplay->buffer(notificationBuffer);

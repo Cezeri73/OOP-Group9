@@ -11,16 +11,25 @@
 #include <string>
 #include <algorithm>
 #include <memory>
+#include "AddDeviceScreen.h"
+#include "Light.h"
+#include "Thermostat.h"
+#include "Curtain.h"
+#include "SecurityCamera.h"
+#include "WaterPurifier.h"
+#include "Elevator.h"
+#include "Refrigerator.h"
 
 class Room{
 	private:
 		std::vector<SmartDevice*> devices;
+		AddDeviceScreen ads;		
 	public:
 		static std::vector<Room*> allRooms;	
 	        std::string roomName;
-		Room(std::string);
+		Room(std::string&);
 		void showRoom();
-		void addDevice(SmartDevice*);
+		void addDevice(int);
 		void removeDevice(std::shared_ptr<SmartDevice>);
 		bool operator==(Room&);
 };
