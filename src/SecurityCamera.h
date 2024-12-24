@@ -11,9 +11,9 @@ public:
 	SecurityCamera(const std::string& deviceName);
 	void startRecording();
 	void deviceCallback(Fl_Widget*,void*) override;
-    	void stopRecording();
-    	bool isRecordingActive() const;
-    	std::string getStatus() const override;
+    void stopRecording();
+    bool isRecordingActive() const;
+    std::string getStatus() const override;
 };
 
 #endif // SECURITYCAMERA_H

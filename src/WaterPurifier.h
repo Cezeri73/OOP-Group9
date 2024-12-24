@@ -8,14 +8,15 @@
 
 class WaterPurifier : public SmartDevice {
 private:
-    	int waterQuality; // Su kalitesi yüzdesi
+    	int waterQuality; 
 public:
-    	WaterPurifier(const std::string& deviceName); 
+    WaterPurifier(const std::string& deviceName); 
 	void checkQuality();
 	void deviceCallback(Fl_Widget*,void*) override;
-    	std::string getStatus() const override;
-    	bool isQualityPoor() const;
-    	int getWaterQuality() const;
+    std::string getStatus() const override;
+    bool isQualityPoor() const;
+    int getWaterQuality() const;
+	static void decreaseQualityCallback(void* data);
 };
 
 #endif // WATERPURIFIER_H

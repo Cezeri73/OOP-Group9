@@ -6,12 +6,12 @@
 
 class Refrigerator : public SmartDevice {
 private:
-    int stockLevel; // Mevcut stok seviyesi
+    int stockLevel=0; // Mevcut stok seviyesi
 
 public:
     // Constructor
     Refrigerator(const std::string& deviceName, int initialStock = 10);
-void deviceCallback(Fl_Widget*,void*) override;
+    void deviceCallback(Fl_Widget*,void*) override;
     void checkStock() ;
     void adjustStock(int amount) ;
     int getStockLevel() const ;

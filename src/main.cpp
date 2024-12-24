@@ -45,52 +45,46 @@
     }
 }*/
 
-int main() {
-	LoginScreen screen;
-	MainWindow window(1200,600,"Smart Home Control Panel");
-	
-	SmartDevice* light = new Light("Living Room Light");
-	SmartDevice* thermostat = new Thermostat("Home Thermostat",23);
-        SmartDevice* curtain = new Curtain("Bedroom Curtain");
-        SmartDevice* camera = new SecurityCamera("Front Door Camera");
-        SmartDevice* purifier = new WaterPurifier("Kitchen Water Purifier");
-        SmartDevice* elevator = new Elevator("Home Elevator");
-        SmartDevice* fridge = new Refrigerator("Kitchen Refrigerator", 8);	
+int main()
+{
+    LoginScreen screen;
+    MainWindow window(1200, 600, "Smart Home Control Panel");
 
-	/*Room kitchen("Kitchen");
-	Room saloon("Saloon");
+    SmartDevice *light = new Light("Living Room Light");
+    SmartDevice *thermostat = new Thermostat("Home Thermostat", 23);
+    SmartDevice *curtain = new Curtain("Bedroom Curtain");
+    SmartDevice *camera = new SecurityCamera("Front Door Camera");
+    SmartDevice *purifier = new WaterPurifier("Kitchen Water Purifier");
+    SmartDevice *elevator = new Elevator("Home Elevator");
+    SmartDevice *fridge = new Refrigerator("Kitchen Refrigerator", 8);
 
-	kitchen.addDevice(light);
-	kitchen.addDevice(thermostat);
-	kitchen.addDevice(curtain);
-	kitchen.addDevice(camera);
-	saloon.addDevice(purifier);
-	saloon.addDevice(elevator);
-	saloon.addDevice(fridge);
-	*/
-	Fl_Text_Display* notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
-    	Fl_Text_Buffer* notificationBuffer = SmartDevice::notificationBuffer;
-    	notificationDisplay->buffer(notificationBuffer);
-    	notificationDisplay->textfont(FL_COURIER);
-    	notificationDisplay->textsize(14);
-    	notificationDisplay->color(FL_BLACK); // Arka plan siyah
-    	notificationDisplay->textcolor(FL_WHITE); // Yazı beyaz
-	
-	window.show();
+    /*Room kitchen("Kitchen");
+    Room saloon("Saloon");
 
+    kitchen.addDevice(light);
+    kitchen.addDevice(thermostat);
+    kitchen.addDevice(curtain);
+    kitchen.addDevice(camera);
+    saloon.addDevice(purifier);
+    saloon.addDevice(elevator);
+    saloon.addDevice(fridge);
+    */
 
-	return Fl::run();
+    Fl_Text_Display *notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
+    Fl_Text_Buffer *notificationBuffer = SmartDevice::notificationBuffer;
+    notificationDisplay->buffer(notificationBuffer);
+    notificationDisplay->textfont(FL_COURIER);
+    notificationDisplay->textsize(14);
+    notificationDisplay->color(FL_BLACK);     // Arka plan siyah
+    notificationDisplay->textcolor(FL_WHITE); // Yazı beyaz
+
+    window.show();
+
+    return Fl::run();
 }
 
+// Initialize Smart Home System
 
-
-
-
-
-
-	
-     	// Initialize Smart Home System
- 
 /*
         // Buttons for Existing Devices
     Fl_Button* lightButton = new Fl_Button(20, 40, 140, 40, "Toggle Light");

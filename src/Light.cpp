@@ -1,22 +1,29 @@
 #include "Light.h"
+
+void Light::notificationCallback(void* data) {
+    Light* light = static_cast<Light*>(data);
+    light->statu == Statu::ON ? light->addNotification("Light turned ON.") : light->addNotification("Light turned OFF.");
+}
 void Light::deviceCallback(Fl_Widget* widget, void* data) {
     Light* light = static_cast<Light*>(data);
     Fl_Button* button = static_cast<Fl_Button*>(widget);
     Fl_Window* window = static_cast<Fl_Window*>(widget->window());
 
-    if (light->getStatus().find("OFF") != std::string::npos) {
+    if (statu == Statu::OFF){
         light->turnOn();
         button->color(FL_GREEN); 
         button->labelcolor(FL_WHITE); 
-        //addNotification("Light turned ON.");
+        Fl::add_timeout(5.0, notificationCallback,light);
+        
     } else {
         light->turnOff();
         button->color(FL_RED); 
-        button->labelcolor(FL_WHITE); 
-        //addNotification("Light turned OFF.");
+        button->labelcolor(FL_WHITE);
+        Fl::add_timeout(5.0, notificationCallback,light);
     }
-    window->redraw(); // Pencereyi güncelle
-    button->redraw(); // Butonu güncelle
+    
+    window->redraw(); 
+    button->redraw();
 }
 void Light::turnOn() {
     statu = Statu::ON;

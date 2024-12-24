@@ -9,11 +9,16 @@ void SecurityCamera::startRecording() {
 }
 void SecurityCamera::deviceCallback(Fl_Widget* widget,void* data){
    	SecurityCamera* camera = static_cast<SecurityCamera*>(data);
-    	if (camera->getStatus().find("No") != std::string::npos) {
+	Fl_Button* button = static_cast<Fl_Button*>(widget);
+    	if (statu == Statu::OFF) {
         	camera->startRecording();
+			button->color(FL_GREEN); 
+        	button->labelcolor(FL_WHITE);
         	addNotification("Security camera started recording.");
     	} else {
         	camera->stopRecording();
+			button->color(FL_RED); 
+        	button->labelcolor(FL_WHITE); 
         	addNotification("Security camera stopped recording.");
     	}
 }

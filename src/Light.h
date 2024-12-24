@@ -12,9 +12,10 @@ public:
 	void turnOn();
 	void turnOff();
 	Light(const std::string&);
-        void adjustBrightness(int level);
+    void adjustBrightness(int level);
 	void deviceCallback(Fl_Widget*,void*) override;
-    	std::string getStatus() const override;
+	static void notificationCallback(void* data);
+    std::string getStatus() const override;
 };
 
 #endif // LIGHT_H

@@ -11,11 +11,16 @@ void Curtain::closeCurtain() {
 }
 void Curtain::deviceCallback(Fl_Widget* widget,void* data) {
 	Curtain* curtain = static_cast<Curtain*>(data);
-    	if (curtain->getStatus().find("Closed") != std::string::npos) {
+	Fl_Button* button = static_cast<Fl_Button*>(widget);
+    	if (statu==Statu::OFF) {
         	curtain->openCurtain();
+			button->color(FL_GREEN); 
+        	button->labelcolor(FL_WHITE);
         	addNotification("Curtain opened.");
     	} else {
         	curtain->closeCurtain();
+			button->color(FL_RED); 
+        	button->labelcolor(FL_WHITE); 
        	 	addNotification("Curtain closed.");
     	}
 }	
