@@ -13,13 +13,13 @@ void Light::deviceCallback(Fl_Widget* widget, void* data) {
         light->turnOn();
         button->color(FL_GREEN); 
         button->labelcolor(FL_WHITE); 
-        Fl::add_timeout(5.0, notificationCallback,light);
+        notificationCallback(data);
         
     } else {
         light->turnOff();
         button->color(FL_RED); 
         button->labelcolor(FL_WHITE);
-        Fl::add_timeout(5.0, notificationCallback,light);
+        notificationCallback(data);
     }
     
     window->redraw(); 
