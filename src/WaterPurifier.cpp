@@ -1,6 +1,7 @@
 #include "WaterPurifier.h"    
 WaterPurifier::WaterPurifier(const std::string& deviceName) 
         : SmartDevice(deviceName), waterQuality(100) {
+        this->type=Type::WaterPurifier;
         Fl::repeat_timeout(10.0, WaterPurifier::decreaseQualityCallback, this);
         } 
 

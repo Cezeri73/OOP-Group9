@@ -1,6 +1,8 @@
 #include "Elevator.h"
 Elevator::Elevator(const std::string& deviceName)
-        : SmartDevice(deviceName), maintenanceRequired(false) {}
+        : SmartDevice(deviceName), maintenanceRequired(false) {
+            this->type=Type::Elevator;
+        }
 
     void Elevator::checkMaintenance() {
         // Rastgele bir değer ile bakım durumunu kontrol et

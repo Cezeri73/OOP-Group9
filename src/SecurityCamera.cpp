@@ -2,6 +2,7 @@
 
 SecurityCamera::SecurityCamera(const std::string& deviceName): SmartDevice(deviceName){
 	isRecording = false;
+	this->type=Type::SecurityCamera;
 }
 void SecurityCamera::startRecording() {
         isRecording = true;

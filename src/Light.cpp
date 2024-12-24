@@ -1,5 +1,4 @@
 #include "Light.h"
-
 void Light::notificationCallback(void* data) {
     Light* light = static_cast<Light*>(data);
     light->statu == Statu::ON ? light->addNotification("Light turned ON.") : light->addNotification("Light turned OFF.");
@@ -35,6 +34,7 @@ void Light::turnOff() {
 
 Light::Light(const std::string& deviceName): SmartDevice(deviceName) {
 	brightness = 70;
+    this->type=Type::Light;
 	}
         
 void Light::adjustBrightness(int level) {

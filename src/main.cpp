@@ -50,13 +50,13 @@ int main()
     LoginScreen screen;
     MainWindow window(1200, 600, "Smart Home Control Panel");
 
-    SmartDevice *light = new Light("Living Room Light");
-    SmartDevice *thermostat = new Thermostat("Home Thermostat", 23);
-    SmartDevice *curtain = new Curtain("Bedroom Curtain");
-    SmartDevice *camera = new SecurityCamera("Front Door Camera");
-    SmartDevice *purifier = new WaterPurifier("Kitchen Water Purifier");
-    SmartDevice *elevator = new Elevator("Home Elevator");
-    SmartDevice *fridge = new Refrigerator("Kitchen Refrigerator", 8);
+    SmartDevice *light = new Light("Light");
+    SmartDevice *thermostat = new Thermostat("Thermostat", 23);
+    SmartDevice *curtain = new Curtain("Curtain");
+    SmartDevice *camera = new SecurityCamera("Camera");
+    SmartDevice *purifier = new WaterPurifier("Purifier");
+    SmartDevice *elevator = new Elevator("Elevator");
+    SmartDevice *fridge = new Refrigerator("Refrigerator", 8);
 
     /*Room kitchen("Kitchen");
     Room saloon("Saloon");

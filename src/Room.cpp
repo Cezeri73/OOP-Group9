@@ -41,7 +41,7 @@ void Room::showRoom() {
 			}
 		}
 
-		Fl_Input *timeInput = new Fl_Input(100, 90, 100, 30, "Seconds:");
+		Fl_Input *timeInput = new Fl_Input(100, 90, 100, 30, "Hour:");
 		Fl_Button *button = new Fl_Button(110, 130, 80, 30, "Enter");
 
 		button->callback([](Fl_Widget *widget, void *data) {
@@ -65,16 +65,22 @@ void Room::showRoom() {
 					Fl_Button tempButton(0, 0, 0, 0, "Temp"); // Dummy button
 					Fl_Window tempWindow(0, 0, 100, 100, "Temp Window"); // Dummy window
 					tempButton.parent(&tempWindow); // Link the button to the dummy window
-
 					device->deviceCallback(&tempButton, device); // Trigger the device callback
 					device->addNotification("Device turned on after timer!");
 
 					// Add any other action you want for the device
 				};
+				if(selectedDevice->type==SmartDevice::Type::Thermostat){
+					Fl_Button *tempButton = new Fl_Button(0, 0, 0, 0, "Temp");
+					selectedDevice->time=seconds;
+					selectedDevice->deviceCallback(tempButton, selectedDevice);
 
-				Fl::add_timeout(seconds, timeoutCallback, selectedDevice);
+				}
+				else{
+					Fl::add_timeout(seconds, timeoutCallback, selectedDevice);
+				}
 			}
-
+			
 			widget->window()->hide(); // Close the timer window
 		}, new std::pair<Room*, Fl_Choice*>(r, choice));
 

@@ -21,10 +21,19 @@ protected:
     	std::string name;
     	Statu statu;
 public:
-    
+    enum class Type {
+        Refrigerator,
+        Thermostat,
+        Light,
+        WaterPurifier,
+        Elevator,
+        Curtain,
+        SecurityCamera,
+    };
+    Type type;
 	static Fl_Text_Buffer* notificationBuffer; 
+    int time;
         //static std::ofstream logFile("notifications.log", std::ios::app);
-public:
     SmartDevice(std::string deviceName)
         : name(deviceName), statu(Statu::OFF) {}
 

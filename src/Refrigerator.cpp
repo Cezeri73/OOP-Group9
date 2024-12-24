@@ -4,6 +4,7 @@
 Refrigerator::Refrigerator(const std::string& deviceName, int initialStock)
         : SmartDevice(deviceName) {
 		initialStock = 10;
+        this->type=Type::Refrigerator;
 	}
 void stockButton(Fl_Widget* widget, void* data){
         Refrigerator* fridge = static_cast<Refrigerator*>(data);

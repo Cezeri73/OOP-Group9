@@ -1,7 +1,9 @@
 #include "Curtain.h"
 
 Curtain::Curtain(const std::string& deviceName)
-        : SmartDevice(deviceName) {}
+        : SmartDevice(deviceName) {
+			this->type=Type::Curtain;
+		}
 
 void Curtain::openCurtain(){
        statu = Statu::ON;

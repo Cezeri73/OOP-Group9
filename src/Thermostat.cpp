@@ -3,16 +3,18 @@
 
 Thermostat::Thermostat(const std::string& deviceName, int initialTemp = 22)
         : SmartDevice(deviceName){
+        this->type=Type::Thermostat;
 		temperature = 22;
 	}
 void Thermostat::notificationCallback(void* data) {
     Thermostat* thermostat = static_cast<Thermostat*>(data);
     thermostat->addNotification("Thermostat temperature set to " + std::to_string(thermostat->getTemperature()) + " °C.");
+    thermostat->time=0;
 }
 void Thermostat::setTemperature(int temp) {
        	temperature = temp;
         statu= Statu::ON; // Sıcaklık ayarlandığında durumu ON yap
-        Fl::add_timeout(5.0, notificationCallback,this);
+        Fl::add_timeout(this->time, notificationCallback,this);
     }
 int Thermostat::getTemperature() const {
         return temperature;
@@ -48,7 +50,6 @@ void Thermostat::deviceCallback(Fl_Widget* widget ,void* data ){
         degree=slider->value();
         
     }, valueOutput);
-    addNotification("Thermostat temperature set to " + std::to_string(thermostat->getTemperature()) + " °C.");
     Fl_Button* confirmButton = new Fl_Button(250,200,100,40,"Confirm");
     confirmButton->callback(confirm,thermostat);
     thermoWindow->end();

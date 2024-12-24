@@ -9,9 +9,9 @@ private:
     int brightness;
 
 public:
+	Light(const std::string&);
 	void turnOn();
 	void turnOff();
-	Light(const std::string&);
     void adjustBrightness(int level);
 	void deviceCallback(Fl_Widget*,void*) override;
 	static void notificationCallback(void* data);
