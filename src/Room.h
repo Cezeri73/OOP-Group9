@@ -19,6 +19,9 @@
 #include "WaterPurifier.h"
 #include "Elevator.h"
 #include "Refrigerator.h"
+#include "nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 class Room{
 	private:
@@ -32,4 +35,7 @@ class Room{
 		void addDevice(int);
 		void removeDevice(std::shared_ptr<SmartDevice>);
 		bool operator==(Room&);
+		json toJson() const;
+		static void fromJson(const json& j);
+		void addDevice(SmartDevice*);
 };

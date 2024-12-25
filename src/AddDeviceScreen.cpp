@@ -2,13 +2,13 @@
 AddDeviceScreen::AddDeviceScreen(){
 	window = new Fl_Window(300, 200, "Device Add Screen");
    	choice = new Fl_Choice(100,50,100,30);
-       	choice->add("Light");
+       	choice->add("Refrigerator");
 	choice->add("Thermostat");
-	choice->add("Refrigerator");
+	choice->add("Light");
 	choice->add("WaterPurifier");
 	choice->add("Elevator");
-	choice->add("Camera");
 	choice->add("Curtain");
+	choice->add("Camera");
     	button = new Fl_Button(110, 130, 80, 30, "Enter");
     	button->callback(login_cb, this);
 	window->end();

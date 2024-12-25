@@ -1,6 +1,48 @@
 #include "MainWindow.h"
 AddRoomScreen MainWindow::addRoomScreen;
 MainWindow::MainWindow(int w,int h,const char* name) : Fl_Window(w,h,name){
+	loadProgram();
+};
+void MainWindow::saveProgram(){
+	json allRoomsJson = json::array();
+	for (const auto& room : Room::allRooms) {
+		allRoomsJson.push_back(room->toJson());
+	}
+	
+	std::ofstream outFile("saveFile");
+	if (outFile.is_open()) {
+		outFile << allRoomsJson.dump(4); 
+	        outFile.close();
+	} 
+	else{
+		std::cerr << "Error opening file for writing!" << std::endl;
+	}
+}
+void MainWindow::loadProgram(){
+	
+
+	std::ifstream inFile("saveFile");
+    	if (inFile.is_open()) {
+        	json allRoomsJson;
+        	inFile >> allRoomsJson;
+
+        	for (const auto& roomJson : allRoomsJson) {
+    			Room::fromJson(roomJson);
+        	}
+    	} 
+	else {
+        	std::cerr << "Error opening file for reading!" << std::endl;
+    	}
+	updateButtons();
+
+}
+
+void MainWindow::updateButtons(){
+	Fl_Window::hide();
+	this->clear();
+	this->begin();	
+	std::vector<Room*> rooms = Room::allRooms;
+	
 	addRoomButton = new Fl_Button(900,20,200,30,"Add Room");
 	addRoomButton->callback([](Fl_Widget* widget,void* data){
 		MainWindow* mw = static_cast<MainWindow*>(data);
@@ -10,13 +52,6 @@ MainWindow::MainWindow(int w,int h,const char* name) : Fl_Window(w,h,name){
 		}
 		mw->updateButtons();
 	},this);
-	this->draw();
-};
-
-void MainWindow::updateButtons(){
-	this->hide();
-	this->begin();	
-	std::vector<Room*> rooms = Room::allRooms;
 	
 	Fl_Text_Display* notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
     	Fl_Text_Buffer* notificationBuffer = SmartDevice::notificationBuffer;
@@ -30,7 +65,6 @@ void MainWindow::updateButtons(){
 	int yPosition = 20;
         for (size_t i = 0; i < rooms.size(); i++) {
             Fl_Button* roomButton = new Fl_Button(100, yPosition, 200, 30, rooms[i]->roomName.c_str());
-	    std::cout<<rooms[i]->roomName;
             roomButton->callback([](Fl_Widget* widget,void* data){
 			    Room* r = static_cast<Room*>(data);
 			    r->showRoom();
@@ -41,3 +75,9 @@ void MainWindow::updateButtons(){
 	this->end();
 	this->show();
 }
+
+void MainWindow::hide(){
+	this->saveProgram();
+	Fl_Window::hide();
+}
+

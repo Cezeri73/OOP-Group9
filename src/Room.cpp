@@ -5,7 +5,7 @@ Room::Room(std::string &name) :
 		roomName(name) {
 	allRooms.push_back(this);
 }
-;
+
 
 void Room::showRoom() {
 	std::string name = roomName;
@@ -114,13 +114,13 @@ void Room::addDevice(int selection) {
 	SmartDevice *device;
 
 	switch (selection) {
-	case 0:
+	case 2:
 		device = new Light("Light");
 		break;
 	case 1:
 		device = new Thermostat("Thermostat", 22);
 		break;
-	case 2:
+	case 0:
 		device = new Refrigerator("Refrigerator");
 		break;
 	case 3:
@@ -129,10 +129,10 @@ void Room::addDevice(int selection) {
 	case 4:
 		device = new Elevator("Elevator");
 		break;
-	case 5:
+	case 6:
 		device = new SecurityCamera("Camera");
 		break;
-	case 6:
+	case 5:
 		device = new Curtain("Curtain");
 		break;
 	case -1:
@@ -141,10 +141,30 @@ void Room::addDevice(int selection) {
 
 	devices.push_back(device);
 }
+void Room::addDevice(SmartDevice* device){
+	devices.push_back(device);
+}
 
 void Room::removeDevice(std::shared_ptr<SmartDevice> device) {
 //	devices.erase(std::remove(devices.begin(), devices.end(),device), devices.end());
 }
 bool Room::operator==(Room &otherRoom) {
 	return roomName == otherRoom.roomName;
+}
+
+json Room::toJson() const{
+	json deviceArray = json::array();
+	for(const auto& device : devices){
+		deviceArray.push_back(device->toJson());
+	}
+	return json{{"roomName",roomName},{"devices",deviceArray}};
+}
+void Room::fromJson(const json& j){
+	std::string roomName = j.at("roomName").get<std::string>();
+	Room* room = new Room(roomName);
+	for(const auto& deviceJson : j.at("devices")){
+		int typeInt = deviceJson.at("type").get<int>();
+		std::cout<<typeInt;
+		room->addDevice(typeInt);
+	}
 }

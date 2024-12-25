@@ -10,6 +10,9 @@
 #include <FL/Fl_Text_Display.H>
 #include <FL/Fl_Input.H>
 #include <FL/Fl_Text_Buffer.H>
+#include "nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 class SmartDevice {
     
@@ -33,23 +36,18 @@ public:
     Type type;
 	static Fl_Text_Buffer* notificationBuffer; 
     int time;
-        //static std::ofstream logFile("notifications.log", std::ios::app);
     SmartDevice(std::string deviceName)
         : name(deviceName), statu(Statu::OFF) {}
 
     virtual ~SmartDevice() = default;
 
-    const char* getName(){
-        	return name.c_str();
-    }
+    const char* getName();
     virtual void deviceCallback(Fl_Widget* widget, void* data) = 0;
     virtual std::string getStatus() const = 0;
-    void addNotification(const std::string& message) {
-    	notificationBuffer->append((message + "\n").c_str());
-    	/*if (logFile.is_open()) {
-        	logFile << message << std::endl;
-    	}*/
-	}	 
+    void addNotification(const std::string& message);
+    json toJson() const;	
+    static SmartDevice* fromJson(const json& j);
+	    
 };
 
 #endif // SMART_DEVICE_H
