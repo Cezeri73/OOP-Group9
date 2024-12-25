@@ -2,7 +2,7 @@
 #include "Room.h"
 AddRoomScreen::AddRoomScreen()
 {
-	window = new Fl_Window(300, 200, "Login Screen");
+	window = new Fl_Window(300, 200, "Add Room");
 	new Fl_Box(20, 30, 80, 30, "Room Name:");
 	roomName = new Fl_Input(110, 30, 150, 30);
 

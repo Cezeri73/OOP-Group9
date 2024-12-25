@@ -11,7 +11,8 @@ void Room::showRoom()
 	std::string name = roomName;
 	Fl_Window *roomWindow = new Fl_Window(400, 400, name.c_str());
 	Fl_Button *addDeviceButton = new Fl_Button(100, 20, 200, 30, "Add Device");
-	Fl_Button *addTimerButton = new Fl_Button(100, 60, 200, 30, "Add Timer");
+	Fl_Button *removeDeviceButton = new Fl_Button(100,60, 200, 30, "Remove Device");
+	Fl_Button *addTimerButton = new Fl_Button(100, 100, 200, 30, "Add Timer");
 
 	addDeviceButton->callback([](Fl_Widget *widget, void *data)
 							  {
@@ -26,6 +27,19 @@ void Room::showRoom()
 		r->addDevice(r->ads.choice->value());
 		r->showRoom(); }, this);
 
+	removeDeviceButton->callback([](Fl_Widget *widget, void *data)
+							  {
+		Fl_Window *parent_window = widget->window();
+		parent_window->hide();
+
+		Room *r = static_cast<Room*>(data);
+		r->rds.show();
+		while(r->rds.shown()){
+			Fl::wait();
+		}
+		r->removeDevice(r->rds.choice->value());
+		r->showRoom(); },this);		
+	
 	addTimerButton->callback([](Fl_Widget *widget, void *data)
 							 {
 								 Fl_Window *parent_window = widget->window();
@@ -103,7 +117,7 @@ void Room::showRoom()
 							 },
 							 this);
 
-	int yPosition = 100;
+	int yPosition = 140;
 	for (size_t i = 0; i < devices.size(); ++i)
 	{
 		Fl_Button *deviceButton = new Fl_Button(100, yPosition, 200, 30,
@@ -154,14 +168,13 @@ void Room::addDevice(int selection)
 
 	devices.push_back(device);
 }
-void Room::addDevice(SmartDevice *device)
-{
-	devices.push_back(device);
-}
-
-void Room::removeDevice(std::shared_ptr<SmartDevice> device)
-{
-	//	devices.erase(std::remove(devices.begin(), devices.end(),device), devices.end());
+void Room::removeDevice(int type){
+	for(int i = devices.size() - 1; i>= 0;--i ){
+		if(static_cast<int>(devices[i]->type) == type){
+			devices.erase(devices.begin() + i);
+			break;
+		}
+	}	
 }
 bool Room::operator==(Room &otherRoom)
 {

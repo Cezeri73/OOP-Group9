@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 AddRoomScreen MainWindow::addRoomScreen;
+RemoveRoomScreen MainWindow::removeRoomScreen;
 MainWindow::MainWindow(int w, int h, const char *name) : Fl_Window(w, h, name)
 {
 	loadProgram();
@@ -61,6 +62,17 @@ void MainWindow::updateButtons()
 		}
 		mw->updateButtons(); }, this);
 
+	removeRoomButton = new Fl_Button(900, 60, 200,30 ,"Remove Room");
+	removeRoomButton->callback([](Fl_Widget *widget, void *data)
+							{
+		MainWindow* mw = static_cast<MainWindow*>(data);
+		removeRoomScreen.show();
+		while(removeRoomScreen.shown()){
+			Fl::wait();
+		}
+		mw->updateButtons(); }, this);
+	
+	
 	Fl_Text_Display *notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
 	Fl_Text_Buffer *notificationBuffer = SmartDevice::notificationBuffer;
 	notificationDisplay->buffer(notificationBuffer);

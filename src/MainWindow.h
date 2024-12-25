@@ -9,12 +9,15 @@
 #include <vector>
 #include <algorithm>
 #include "AddRoomScreen.h"
+#include "RemoveRoomScreen.h"
 #include <fstream>
 class MainWindow : public Fl_Window
 {
 private:
 	static AddRoomScreen addRoomScreen;
+	static RemoveRoomScreen removeRoomScreen;
 	Fl_Button *addRoomButton;
+	Fl_Button *removeRoomButton;
 	void saveProgram();
 	void loadProgram();
 

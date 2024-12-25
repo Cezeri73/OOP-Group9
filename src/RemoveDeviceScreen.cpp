@@ -1,5 +1,5 @@
-#include "AddDeviceScreen.h"
-AddDeviceScreen::AddDeviceScreen()
+#include "RemoveDeviceScreen.h"
+RemoveDeviceScreen::RemoveDeviceScreen()
 {
 	window = new Fl_Window(300, 200, "Device Add Screen");
 	choice = new Fl_Choice(100, 50, 100, 30);
@@ -14,16 +14,17 @@ AddDeviceScreen::AddDeviceScreen()
 	button->callback(login_cb, this);
 	window->end();
 }
-void AddDeviceScreen::show()
+void RemoveDeviceScreen::show()
 {
 	window->show();
 }
-bool AddDeviceScreen::shown()
+bool RemoveDeviceScreen::shown()
 {
 	return window->visible();
 }
-void AddDeviceScreen::login_cb(Fl_Widget *widget, void *data)
+void RemoveDeviceScreen::login_cb(Fl_Widget *widget, void *data)
 {
 	Fl_Window *parent_window = widget->window();
 	parent_window->hide();
 }
+

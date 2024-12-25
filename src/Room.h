@@ -12,6 +12,7 @@
 #include <algorithm>
 #include <memory>
 #include "AddDeviceScreen.h"
+#include "RemoveDeviceScreen.h"
 #include "Light.h"
 #include "Thermostat.h"
 #include "Curtain.h"
@@ -28,14 +29,14 @@ class Room
 private:
 	std::vector<SmartDevice *> devices;
 	AddDeviceScreen ads;
-
+	RemoveDeviceScreen rds;
 public:
 	static std::vector<Room *> allRooms;
 	std::string roomName;
 	Room(std::string &);
 	void showRoom();
 	void addDevice(int);
-	void removeDevice(std::shared_ptr<SmartDevice>);
+	void removeDevice(int);
 	bool operator==(Room &);
 	json toJson() const;
 	static void fromJson(const json &j);
