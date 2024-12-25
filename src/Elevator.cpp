@@ -1,26 +1,25 @@
 #include "Elevator.h"
-Elevator::Elevator(const std::string& deviceName)
-        : SmartDevice(deviceName), maintenanceRequired(false) {
-            this->type=Type::Elevator;
-        }
+#include <time.h>
 
-    void Elevator::checkMaintenance() {
-        // Rastgele bir değer ile bakım durumunu kontrol et
-        maintenanceRequired = (std::rand() % 2 == 0);
-    }
-void Elevator::deviceCallback(Fl_Widget* widget,void* data) {
-    Elevator* elevator = static_cast<Elevator*>(data);
-    if (std::rand() % 2 == 0) {
+Elevator::Elevator(const std::string &deviceName)
+    : SmartDevice(deviceName), maintenanceRequired(false)
+{
+    this->type = Type::Elevator;
+}
+
+void Elevator::deviceCallback(Fl_Widget *widget, void *data)
+{
+    Elevator *elevator = static_cast<Elevator *>(data);
+    srand(time(NULL));
+    int num = rand() % 100 + 1;
+    if (num <= 8)
+    {
         addNotification("Elevator maintenance required!");
-    } else {
+        maintenanceRequired = true;
+    }
+    else
+    {
         addNotification("Elevator is functioning well.");
+        maintenanceRequired = false;
     }
 };
-    bool Elevator::isMaintenanceRequired() const {
-        return maintenanceRequired;
-    }
-
-    std::string Elevator::getStatus() const {
-        return "Elevator Status: " + std::string(maintenanceRequired ? "Maintenance Required" : "Operational");
-    }
-

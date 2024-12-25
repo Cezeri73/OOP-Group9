@@ -6,17 +6,17 @@
 #include <cstdlib>
 #include <ctime>
 
-class WaterPurifier : public SmartDevice {
+class WaterPurifier : public SmartDevice
+{
 private:
-    	int waterQuality; 
+    int waterQuality;
+
 public:
-    WaterPurifier(const std::string& deviceName); 
-	void checkQuality();
-	void deviceCallback(Fl_Widget*,void*) override;
-    std::string getStatus() const override;
-    bool isQualityPoor() const;
+    WaterPurifier(const std::string &deviceName);
+    ~WaterPurifier();
+    void deviceCallback(Fl_Widget *, void *) override;
     int getWaterQuality() const;
-	static void decreaseQualityCallback(void* data);
+    static void decreaseQualityCallback(void *data);
 };
 
 #endif // WATERPURIFIER_H

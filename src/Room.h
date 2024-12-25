@@ -23,19 +23,21 @@
 
 using json = nlohmann::json;
 
-class Room{
-	private:
-		std::vector<SmartDevice*> devices;
-		AddDeviceScreen ads;		
-	public:
-		static std::vector<Room*> allRooms;	
-	        std::string roomName;
-		Room(std::string&);
-		void showRoom();
-		void addDevice(int);
-		void removeDevice(std::shared_ptr<SmartDevice>);
-		bool operator==(Room&);
-		json toJson() const;
-		static void fromJson(const json& j);
-		void addDevice(SmartDevice*);
+class Room
+{
+private:
+	std::vector<SmartDevice *> devices;
+	AddDeviceScreen ads;
+
+public:
+	static std::vector<Room *> allRooms;
+	std::string roomName;
+	Room(std::string &);
+	void showRoom();
+	void addDevice(int);
+	void removeDevice(std::shared_ptr<SmartDevice>);
+	bool operator==(Room &);
+	json toJson() const;
+	static void fromJson(const json &j);
+	void addDevice(SmartDevice *);
 };
