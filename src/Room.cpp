@@ -139,7 +139,7 @@ void Room::showRoom()
                              this);
 
     // Add buttons for each device in the room
-    int yPosition = 100;
+    int yPosition = 140;
     for (size_t i = 0; i < devices.size(); ++i)
     {
         Fl_Button *deviceButton = new Fl_Button(100, yPosition, 200, 30, devices[i]->getName());
