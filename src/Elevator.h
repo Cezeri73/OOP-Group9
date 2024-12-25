@@ -6,17 +6,11 @@
 
 class Elevator : public SmartDevice {
 private:
-    bool maintenanceRequired; // Asansörün bakıma ihtiyacı olup olmadığını belirten bayrak
+    bool maintenanceRequired; 
 
 public:
     Elevator(const std::string& deviceName);
-
-    void checkMaintenance();
-void deviceCallback(Fl_Widget*,void*) override;
-
-    bool isMaintenanceRequired() const;
-
-    std::string getStatus() const override;
+    void deviceCallback(Fl_Widget*,void*) override;
 };
 
-#endif // ELEVATOR_H
+#endif 

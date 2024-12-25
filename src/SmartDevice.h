@@ -14,17 +14,21 @@
 
 using json = nlohmann::json;
 
-class SmartDevice {
-    
+class SmartDevice
+{
+
 protected:
-    enum class Statu {
+    enum class Statu
+    {
         ON,
         OFF
     };
-    	std::string name;
-    	Statu statu;
+    std::string name;
+    Statu statu;
+
 public:
-    enum class Type {
+    enum class Type
+    {
         Refrigerator,
         Thermostat,
         Light,
@@ -34,20 +38,18 @@ public:
         SecurityCamera,
     };
     Type type;
-	static Fl_Text_Buffer* notificationBuffer; 
-    int time;
+    static Fl_Text_Buffer *notificationBuffer;
+    int hour;
     SmartDevice(std::string deviceName)
         : name(deviceName), statu(Statu::OFF) {}
 
     virtual ~SmartDevice() = default;
 
-    const char* getName();
-    virtual void deviceCallback(Fl_Widget* widget, void* data) = 0;
-    virtual std::string getStatus() const = 0;
-    void addNotification(const std::string& message);
-    json toJson() const;	
-    static SmartDevice* fromJson(const json& j);
-	    
+    const char *getName();
+    virtual void deviceCallback(Fl_Widget *widget, void *data) = 0;
+    void addNotification(const std::string &message);
+    json toJson() const;
+    static SmartDevice *fromJson(const json &j);
 };
 
 #endif // SMART_DEVICE_H

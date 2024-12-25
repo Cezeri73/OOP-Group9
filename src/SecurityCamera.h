@@ -4,16 +4,13 @@
 #include "SmartDevice.h"
 #include <string>
 
-class SecurityCamera : public SmartDevice {
-private:
-    	bool isRecording; 
+class SecurityCamera : public SmartDevice
+{
 public:
-	SecurityCamera(const std::string& deviceName);
+	SecurityCamera(const std::string &deviceName);
 	void startRecording();
-	void deviceCallback(Fl_Widget*,void*) override;
-    void stopRecording();
-    bool isRecordingActive() const;
-    std::string getStatus() const override;
+	void deviceCallback(Fl_Widget *, void *) override;
+	void stopRecording();
 };
 
 #endif // SECURITYCAMERA_H
