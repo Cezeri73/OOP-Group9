@@ -1,24 +1,53 @@
-#ifndef SMARTDEVICE_H
-#define SMARTDEVICE_H
+#ifndef SMART_DEVICE_H
+#define SMART_DEVICE_H
 
 #include <string>
-#include <vector>
-#include "NotificationSystem.h"
+#include <iostream>
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Box.H>
+#include <FL/Fl_Button.H>
+#include <FL/Fl_Text_Display.H>
+#include <FL/Fl_Input.H>
+#include <FL/Fl_Text_Buffer.H>
+#include "nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 class SmartDevice {
+    
 protected:
-    std::string name;
-    bool status;
-    std::vector<Observer*> observers;
-
+    enum class Statu {
+        ON,
+        OFF
+    };
+    	std::string name;
+    	Statu statu;
 public:
-    SmartDevice(const std::string& deviceName);
+    enum class Type {
+        Refrigerator,
+        Thermostat,
+        Light,
+        WaterPurifier,
+        Elevator,
+        Curtain,
+        SecurityCamera,
+    };
+    Type type;
+	static Fl_Text_Buffer* notificationBuffer; 
+    int time;
+    SmartDevice(std::string deviceName)
+        : name(deviceName), statu(Statu::OFF) {}
+
     virtual ~SmartDevice() = default;
 
-    void addObserver(Observer* observer);
-    void notifyObservers(const std::string& message);
-
-    virtual void toggle() = 0;
+    const char* getName();
+    virtual void deviceCallback(Fl_Widget* widget, void* data) = 0;
+    virtual std::string getStatus() const = 0;
+    void addNotification(const std::string& message);
+    json toJson() const;	
+    static SmartDevice* fromJson(const json& j);
+	    
 };
 
-#endif
+#endif // SMART_DEVICE_H

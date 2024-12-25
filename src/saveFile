@@ -1,0 +1,24 @@
+[
+    {
+        "devices": [
+            {
+                "type": 0
+            }
+        ],
+        "roomName": "asd"
+    },
+    {
+        "devices": [
+            {
+                "type": 3
+            },
+            {
+                "type": 5
+            },
+            {
+                "type": 2
+            }
+        ],
+        "roomName": "asdbsa"
+    }
+]

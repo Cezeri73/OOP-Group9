@@ -1,17 +1,23 @@
 #ifndef NOTIFICATIONSYSTEM_H
 #define NOTIFICATIONSYSTEM_H
 
+#include <vector>
+#include <algorithm>
 #include <iostream>
-#include <string>
+#include "INotifiable.h"
 
-class Observer {
+class NotificationSystem {
+private:
+    std::vector<INotifiable*> subscribers;
+
 public:
-    virtual void update(const std::string& message) = 0;
+    void subscribe(INotifiable* subscriber) { subscribers.push_back(subscriber); }
+    void notify(const std::string& message) {
+        for (auto subscriber : subscribers) {
+            subscriber->sendNotification(message);
+        }
+    }
 };
 
-class NotificationSystem : public Observer {
-public:
-    void update(const std::string& message) override;
-};
+#endif // NOTIFICATIONSYSTEM_H
 
-#endif
