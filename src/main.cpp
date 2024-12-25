@@ -23,11 +23,18 @@
 
 int main()
 {
+    // Create an instance of LoginScreen
     LoginScreen screen;
+    
+    // Create an instance of MainWindow with specific dimensions and title
     MainWindow window(1200, 600, "Smart Home Control Panel");
+
+    // Check if the user is authorized (if not, exit the program)
     if(!screen.authorized){
-    	return 0;
-    }	    
+        return 0; // Exit the program if not authorized
+    }
+    
+    // Create instances of different SmartDevices
     SmartDevice *light = new Light("Light");
     SmartDevice *thermostat = new Thermostat("Thermostat", 23);
     SmartDevice *curtain = new Curtain("Curtain");
@@ -36,14 +43,26 @@ int main()
     SmartDevice *elevator = new Elevator("Elevator");
     SmartDevice *fridge = new Refrigerator("Refrigerator", 8);
 
+    // Create a Fl_Text_Display to show notifications
     Fl_Text_Display *notificationDisplay = new Fl_Text_Display(350, 80, 500, 300, "Notification Sys");
+
+    // Set the notification buffer from the SmartDevice class to show messages
     Fl_Text_Buffer *notificationBuffer = SmartDevice::notificationBuffer;
+    
+    // Associate the notification buffer with the text display widget
     notificationDisplay->buffer(notificationBuffer);
+
+    // Set the font and size of the displayed text
     notificationDisplay->textfont(FL_COURIER);
     notificationDisplay->textsize(14);
-    notificationDisplay->color(FL_BLACK);
-    notificationDisplay->textcolor(FL_WHITE);
+
+    // Set the text and background colors of the notification display
+    notificationDisplay->color(FL_BLACK); // Background color
+    notificationDisplay->textcolor(FL_WHITE); // Text color
+
+    // Show the main window
     window.show();
 
-    return Fl::run();
+    // Start the FLTK event loop (necessary to handle UI events)
+    return Fl::run(); // Run the FLTK event loop
 }
