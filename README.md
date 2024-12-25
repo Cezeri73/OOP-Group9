@@ -20,7 +20,13 @@ In this project, we designed and implemented a **Smart Home Automation System**,
 - **IDE:** [Visual Studio / CLion / Code::Blocks / Vim / etc.]
 - **Version Control:** Git & GitHub
 
+
+## Contribution
+Each Member Contribute as a team , with a 
+nice conversation ,the team was well organized ,
+and the project was completed in a timely manner. So we can say Each member take a active rol in the process.
 ## 👥 Collaborators
+
 
 - **Furkan Cem Çelik** - 23050151020
 - **Zekeriya Damcı** - 22050111074
