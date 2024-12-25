@@ -1,0 +1,51 @@
+<map id="SmartDevice.h" name="SmartDevice.h">
+<area shape="rect" id="Node000001" title="Header file for the SmartDevice class, representing the base class for all smart devices." alt="" coords="551,5,660,31"/>
+<area shape="rect" id="Node000002" href="$_curtain_8h.html" title="Header file for the Curtain class." alt="" coords="134,79,208,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="537,31,391,52,221,82,209,84,208,79,220,76,390,47,536,26"/>
+<area shape="rect" id="Node000004" href="$_room_8h.html" title="Header file for the Room class, representing rooms in the smart home system." alt="" coords="420,153,487,178"/>
+<area shape="poly" id="edge18_Node000001_Node000004" title=" " alt="" coords="584,43,468,154,464,150,580,40"/>
+<area shape="rect" id="Node000010" href="$_elevator_8h.html" title="Header file for the Elevator class." alt="" coords="679,79,758,105"/>
+<area shape="poly" id="edge5_Node000001_Node000010" title=" " alt="" coords="639,37,701,76,698,81,636,42"/>
+<area shape="rect" id="Node000012" href="$_light_8h.html" title="Header file for the Light class." alt="" coords="914,79,974,105"/>
+<area shape="poly" id="edge9_Node000001_Node000012" title=" " alt="" coords="676,30,902,76,914,79,913,85,901,82,675,35"/>
+<area shape="rect" id="Node000014" href="$_smart_device_8cpp.html" title="Implementation of the SmartDevice class, representing the base class for all smart devices." alt="" coords="1106,153,1228,178"/>
+<area shape="poly" id="edge23_Node000001_Node000014" title=" " alt="" coords="676,22,821,39,905,55,988,76,1034,93,1078,113,1148,150,1145,155,1076,118,1032,98,986,82,904,60,820,45,675,27"/>
+<area shape="rect" id="Node000015" href="$_refrigerator_8h.html" title="Header file for the Refrigerator class, representing a smart refrigerator device." alt="" coords="232,79,331,105"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="537,37,332,82,331,77,536,32"/>
+<area shape="rect" id="Node000017" href="$_security_camera_8h.html" title="Header file for the SecurityCamera class, representing a smart security camera device." alt="" coords="356,79,482,105"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="561,39,452,81,450,76,559,34"/>
+<area shape="rect" id="Node000019" href="$_thermostat_8h.html" title="Header file for the Thermostat class, representing a smart thermostat device." alt="" coords="556,79,655,105"/>
+<area shape="poly" id="edge24_Node000001_Node000019" title=" " alt="" coords="608,46,608,79,603,79,603,46"/>
+<area shape="rect" id="Node000021" href="$_water_purifier_8h.html" title="Header file for the WaterPurifier class, representing a smart water purifier device." alt="" coords="783,79,889,105"/>
+<area shape="poly" id="edge28_Node000001_Node000021" title=" " alt="" coords="660,33,798,76,796,81,658,38"/>
+<area shape="rect" id="Node000003" href="$_curtain_8cpp.html" title="Implementation of the Curtain class, representing a smart curtain device." alt="" coords="5,153,94,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,115,72,154,69,150,136,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="224,104,409,150,420,153,419,158,408,155,223,109"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title="Entry point for the Smart Home Control Panel application." alt="" coords="647,153,721,178"/>
+<area shape="poly" id="edge4_Node000002_Node000007" title=" " alt="" coords="224,102,340,118,431,126,521,134,635,150,647,152,646,158,634,155,521,139,431,131,339,124,223,108"/>
+<area shape="poly" id="edge7_Node000010_Node000004" title=" " alt="" coords="665,110,489,158,487,152,663,105"/>
+<area shape="poly" id="edge8_Node000010_Node000007" title=" " alt="" coords="709,120,692,153,688,151,704,117"/>
+<area shape="rect" id="Node000011" href="$_elevator_8cpp.html" title="Implementation file for the Elevator class, representing a smart elevator device." alt="" coords="746,153,839,178"/>
+<area shape="poly" id="edge6_Node000010_Node000011" title=" " alt="" coords="744,114,782,150,778,154,740,117"/>
+<area shape="poly" id="edge11_Node000012_Node000004" title=" " alt="" coords="899,107,786,124,697,132,610,139,499,155,488,158,487,152,498,150,609,134,697,126,786,119,898,102"/>
+<area shape="poly" id="edge13_Node000012_Node000007" title=" " alt="" coords="900,108,723,156,721,151,899,103"/>
+<area shape="rect" id="Node000013" href="$_light_8cpp.html" title="Implementation of the Light class, representing a smart light device." alt="" coords="1007,153,1081,178"/>
+<area shape="poly" id="edge10_Node000012_Node000013" title=" " alt="" coords="975,112,1029,150,1026,154,972,116"/>
+<area shape="poly" id="edge12_Node000012_Node000014" title=" " alt="" coords="990,105,1130,150,1128,155,988,110"/>
+<area shape="poly" id="edge16_Node000015_Node000004" title=" " alt="" coords="326,108,425,150,423,155,324,113"/>
+<area shape="poly" id="edge17_Node000015_Node000007" title=" " alt="" coords="347,102,493,125,635,150,647,153,646,158,634,155,492,131,346,108"/>
+<area shape="rect" id="Node000016" href="$_refrigerator_8cpp.html" title="Implementation of the Refrigerator class, representing a smart refrigerator device." alt="" coords="118,153,232,178"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="252,116,194,154,192,150,249,111"/>
+<area shape="poly" id="edge20_Node000017_Node000004" title=" " alt="" coords="434,117,450,151,445,153,429,120"/>
+<area shape="poly" id="edge22_Node000017_Node000007" title=" " alt="" coords="479,107,647,152,646,157,478,112"/>
+<area shape="rect" id="Node000018" href="$_security_camera_8cpp.html" title="Implementation of the SecurityCamera class, representing a smart security camera device." alt="" coords="255,153,396,178"/>
+<area shape="poly" id="edge21_Node000017_Node000018" title=" " alt="" coords="393,117,343,154,339,150,389,112"/>
+<area shape="poly" id="edge25_Node000019_Node000004" title=" " alt="" coords="567,114,481,154,478,150,565,109"/>
+<area shape="poly" id="edge27_Node000019_Node000007" title=" " alt="" coords="632,113,673,150,669,154,628,117"/>
+<area shape="rect" id="Node000020" href="$_thermostat_8cpp.html" title="Implementation of the Thermostat class, representing a smart thermostat device." alt="" coords="511,153,623,178"/>
+<area shape="poly" id="edge26_Node000019_Node000020" title=" " alt="" coords="594,120,576,153,571,151,590,117"/>
+<area shape="poly" id="edge29_Node000021_Node000004" title=" " alt="" coords="768,108,499,155,488,158,487,153,498,150,767,103"/>
+<area shape="poly" id="edge31_Node000021_Node000007" title=" " alt="" coords="798,114,711,154,709,150,795,109"/>
+<area shape="rect" id="Node000022" href="$_water_purifier_8cpp.html" title="Implementation of the WaterPurifier class, representing a smart water purifier device." alt="" coords="863,153,983,178"/>
+<area shape="poly" id="edge30_Node000021_Node000022" title=" " alt="" coords="864,113,910,150,907,154,861,117"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Thermostat::notificationCallback" name="Thermostat::notificationCallback">
+<area shape="rect" id="Node000001" title="Callback function to generate a notification." alt="" coords="5,23,164,64"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="212,5,404,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,32,196,28,196,33,165,37"/>
+<area shape="rect" id="Node000003" href="$class_thermostat.html#ad9cc8c4f8377a7c299041e1c82937f26" title="Retrieves the current temperature of the thermostat." alt="" coords="215,55,400,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,49,200,53,199,59,164,55"/>
+</map>

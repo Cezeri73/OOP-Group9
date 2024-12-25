@@ -1,0 +1,6 @@
+<map id="WaterPurifier::decreaseQualityCallback" name="WaterPurifier::decreaseQualityCallback">
+<area shape="rect" id="Node000001" title="Callback function to decrease water quality over time." alt="" coords="5,29,204,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="58,29,56,19,64,10,80,5,105,3,131,5,147,11,145,16,130,10,104,8,81,10,67,15,61,21,64,28"/>
+<area shape="rect" id="Node000002" href="$class_water_purifier.html#a9373d631b7b2615026e96ae575e82be8" title="Retrieves the current water quality of the purifier." alt="" coords="252,37,449,62"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="204,47,236,47,236,52,204,52"/>
+</map>

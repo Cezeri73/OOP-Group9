@@ -1,0 +1,9 @@
+<map id="Thermostat.cpp" name="Thermostat.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the Thermostat class, representing a smart thermostat device." alt="" coords="77,5,189,31"/>
+<area shape="rect" id="Node000002" href="$_thermostat_8h.html" title="Header file for the Thermostat class, representing a smart thermostat device." alt="" coords="10,79,109,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,33,84,70,81,66,119,29"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="132,79,283,105"/>
+<area shape="poly" id="edge3_Node000001_Node000014" title=" " alt="" coords="147,30,186,66,182,70,144,33"/>
+<area shape="rect" id="Node000003" href="$_smart_device_8h.html" title="Header file for the SmartDevice class, representing the base class for all smart devices." alt="" coords="5,153,114,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,105,62,137,57,137,57,105"/>
+</map>

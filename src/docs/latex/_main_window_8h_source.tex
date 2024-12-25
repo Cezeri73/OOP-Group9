@@ -1,0 +1,39 @@
+\doxysection{Main\+Window.\+h}
+\hypertarget{_main_window_8h_source}{}\label{_main_window_8h_source}\mbox{\hyperlink{_main_window_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_room_8h}{Room.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Window.H>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Button.H>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_add_room_screen_8h}{AddRoomScreen.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_remove_room_screen_8h}{RemoveRoomScreen.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ Fl\_Window}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_add_room_screen}{AddRoomScreen}}\ addRoomScreen;\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_remove_room_screen}{RemoveRoomScreen}}\ removeRoomScreen;\ }
+\DoxyCodeLine{00032\ \ \ \ \ Fl\_Button\ *addRoomButton;\ }
+\DoxyCodeLine{00033\ \ \ \ \ Fl\_Button\ *removeRoomButton;\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ saveProgram();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ loadProgram();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_main_window_ad4bbb2ed4b628db786d5d490303d7a08}{MainWindow}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *title);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad6ddd0b30d7347496095973027a8d86b}{updateButtons}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a07c3601e358cd9111d90396d0767c117}{hide}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \};}
+
+\end{DoxyCode}

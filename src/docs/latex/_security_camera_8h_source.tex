@@ -1,0 +1,26 @@
+\doxysection{Security\+Camera.\+h}
+\hypertarget{_security_camera_8h_source}{}\label{_security_camera_8h_source}\mbox{\hyperlink{_security_camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SECURITYCAMERA\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SECURITYCAMERA\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_smart_device_8h}{SmartDevice.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_security_camera}{SecurityCamera}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_smart_device}{SmartDevice}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a92575c047fa512ce4951d122b464b00d}{SecurityCamera}}(\textcolor{keyword}{const}\ std::string\ \&deviceName);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_camera_aadaf05f72d9bd0d8a4accafc3b8067d4}{startRecording}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_camera_a8e77bb59b17e3a970b04556069b0b601}{stopRecording}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_camera_afb09ef10e181261661cc4288aa333d59}{deviceCallback}}(Fl\_Widget\ *,\ \textcolor{keywordtype}{void}\ *)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SECURITYCAMERA\_H}}
+
+\end{DoxyCode}

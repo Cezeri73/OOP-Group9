@@ -1,0 +1,7 @@
+<map id="MainWindow.h" name="MainWindow.h">
+<area shape="rect" id="Node000001" title="Header file for the MainWindow class, providing the main interface for managing rooms and smart devic..." alt="" coords="72,5,178,31"/>
+<area shape="rect" id="Node000002" href="$_main_window_8cpp.html" title="Implementation of the MainWindow class, providing the main interface for managing rooms and smart dev..." alt="" coords="5,79,125,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,44,77,80,73,77,103,41"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the Smart Home Control Panel application." alt="" coords="149,79,224,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,41,178,77,174,80,143,44"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Light::deviceCallback" name="Light::deviceCallback">
+<area shape="rect" id="Node000001" title="Callback function for light&#45;related actions." alt="" coords="5,55,152,80"/>
+<area shape="rect" id="Node000002" href="$class_light.html#a65f28b93bbe0cdf0f479b6c1c8031aaf" title="Static callback function for light notifications." alt="" coords="200,5,371,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,51,213,33,214,38,136,57"/>
+<area shape="rect" id="Node000004" href="$class_light.html#aee2ab836d8c984756e10e8e301130aa4" title="Turns the light off." alt="" coords="237,55,334,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,65,222,65,222,70,152,70"/>
+<area shape="rect" id="Node000005" href="$class_light.html#a79613afb0cf7788c131091afccb46aef" title="Turns the light on." alt="" coords="237,104,334,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="136,78,222,99,221,104,135,84"/>
+<area shape="rect" id="Node000003" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="419,5,611,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,16,403,16,403,21,371,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Light" name="Light">
+<area shape="rect" id="Node000001" title="Represents a smart light device." alt="" coords="5,323,151,471"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html" title="Abstract base class for all smart devices in the smart home system." alt="" coords="17,5,139,275"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,290,81,324,76,324,76,290"/>
+</map>

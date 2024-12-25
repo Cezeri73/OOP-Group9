@@ -1,0 +1,5 @@
+<map id="Thermostat" name="Thermostat">
+<area shape="rect" id="Node000001" title="Represents a smart thermostat in the smart home system." alt="" coords="5,323,151,491"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html" title="Abstract base class for all smart devices in the smart home system." alt="" coords="17,5,139,275"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,290,81,323,76,323,76,290"/>
+</map>

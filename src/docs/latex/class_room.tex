@@ -1,0 +1,236 @@
+\doxysection{Room Class Reference}
+\hypertarget{class_room}{}\label{class_room}\index{Room@{Room}}
+
+
+Represents a room in the smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Room.\+h$>$}
+
+
+
+Collaboration diagram for Room\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_room__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_a23e49c90f9b1ea639f8318c8e90701be}{Room}} (std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_room}{Room} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_ac2fedceb5afe4ea8dec6414b3d7d72e6}{show\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Displays the room interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_a1427d03d54ef55b428e06cb470582c89}{add\+Device}} (int selection)
+\begin{DoxyCompactList}\small\item\em Adds a new device to the room based on user selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_aa35555c4ffadc737d5f5b7259234e9dc}{remove\+Device}} (int type)
+\begin{DoxyCompactList}\small\item\em Removes a device from the room by its type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a7c7022ad3cfa818819ba7ae695433497}{operator==}} (\mbox{\hyperlink{class_room}{Room}} \&other\+Room)
+\begin{DoxyCompactList}\small\item\em Compares two rooms for equality based on their names. \end{DoxyCompactList}\item 
+json \mbox{\hyperlink{class_room_a22fcb1266028398aa07a393162954ac8}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the room data to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_acdb01425c0e9cab95acc9a80142e436c}{add\+Device}} (\mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*}device)
+\begin{DoxyCompactList}\small\item\em Adds a device directly to the room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_room_a9b81e1cf3a95eecb45a1c4f743ee89db}{from\+Json}} (const json \&j)
+\begin{DoxyCompactList}\small\item\em Deserializes room data from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_room_add2825ea48f72ca1b06ae26c28297cdc}\label{class_room_add2825ea48f72ca1b06ae26c28297cdc} 
+std\+::string {\bfseries room\+Name}
+\begin{DoxyCompactList}\small\item\em Name of the room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_room_acb699a54a32f8e66bd312d8be97cbccb}\label{class_room_acb699a54a32f8e66bd312d8be97cbccb} 
+static std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries all\+Rooms}
+\begin{DoxyCompactList}\small\item\em List of all room instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a room in the smart home system. 
+
+The \doxylink{class_room}{Room} class manages smart devices within a room, allowing users to add, remove, and interact with devices. It also supports serialization and deserialization for saving and loading room configurations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_room_a23e49c90f9b1ea639f8318c8e90701be}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}}
+{\footnotesize\ttfamily \label{class_room_a23e49c90f9b1ea639f8318c8e90701be} 
+Room\+::\+Room (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_room}{Room} class. 
+
+Initializes a room with a given name and adds it to the list of all rooms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the room. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_room_a1427d03d54ef55b428e06cb470582c89}\index{Room@{Room}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_room_a1427d03d54ef55b428e06cb470582c89} 
+void Room\+::add\+Device (\begin{DoxyParamCaption}\item[{int}]{selection}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new device to the room based on user selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selection} & Index of the selected device type.\\
+\hline
+{\em selection} & Index of the selected device type from the UI. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_acdb01425c0e9cab95acc9a80142e436c}\index{Room@{Room}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_room_acdb01425c0e9cab95acc9a80142e436c} 
+void Room\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*}}]{device}{}\end{DoxyParamCaption})}
+
+
+
+Adds a device directly to the room. 
+
+Adds a device directly to the room (used by JSON deserialization).
+
+This method is typically used during deserialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Pointer to the \doxylink{class_smart_device}{Smart\+Device} to add.\\
+\hline
+{\em device} & Pointer to the \doxylink{class_smart_device}{Smart\+Device} to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_a9b81e1cf3a95eecb45a1c4f743ee89db}\index{Room@{Room}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily \label{class_room_a9b81e1cf3a95eecb45a1c4f743ee89db} 
+void Room\+::from\+Json (\begin{DoxyParamCaption}\item[{const json \&}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Deserializes room data from JSON format. 
+
+Creates a room instance and its devices from a JSON representation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON representation of the room.\\
+\hline
+{\em j} & JSON representation of the room. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_room_a9b81e1cf3a95eecb45a1c4f743ee89db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_room_a7c7022ad3cfa818819ba7ae695433497}\index{Room@{Room}!operator==@{operator==}}
+\index{operator==@{operator==}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_room_a7c7022ad3cfa818819ba7ae695433497} 
+bool Room\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \&}]{other\+Room}{}\end{DoxyParamCaption})}
+
+
+
+Compares two rooms for equality based on their names. 
+
+Equality operator to compare rooms by name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Room} & The room to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the rooms have the same name, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Room} & The other room to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the room names are equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_room_aa35555c4ffadc737d5f5b7259234e9dc}\index{Room@{Room}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily \label{class_room_aa35555c4ffadc737d5f5b7259234e9dc} 
+void Room\+::remove\+Device (\begin{DoxyParamCaption}\item[{int}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Removes a device from the room by its type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of device to remove.\\
+\hline
+{\em type} & Type of the device to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_ac2fedceb5afe4ea8dec6414b3d7d72e6}\index{Room@{Room}!showRoom@{showRoom}}
+\index{showRoom@{showRoom}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{showRoom()}{showRoom()}}
+{\footnotesize\ttfamily \label{class_room_ac2fedceb5afe4ea8dec6414b3d7d72e6} 
+void Room\+::show\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays the room interface. 
+
+Creates a UI for managing devices and actions within the room.
+
+Creates a window for the room, allowing the user to manage devices, add timers, and more. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_ac2fedceb5afe4ea8dec6414b3d7d72e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_room_a22fcb1266028398aa07a393162954ac8}\index{Room@{Room}!toJson@{toJson}}
+\index{toJson@{toJson}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily \label{class_room_a22fcb1266028398aa07a393162954ac8} 
+json Room\+::to\+Json (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Serializes the room data to JSON format. 
+
+Converts the room and its devices into a JSON representation for saving.
+
+\begin{DoxyReturn}{Returns}
+JSON representation of the room and its devices.
+
+JSON representation of the room and its devices. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_room_8h}{Room.\+h}}\item 
+\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

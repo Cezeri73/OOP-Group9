@@ -1,0 +1,67 @@
+\doxysection{Smart\+Device.\+h}
+\hypertarget{_smart_device_8h_source}{}\label{_smart_device_8h_source}\mbox{\hyperlink{_smart_device_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SMART\_DEVICE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SMART\_DEVICE\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <FL/Fl.H>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Window.H>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Box.H>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Button.H>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Text\_Display.H>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Input.H>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Text\_Buffer.H>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_smart_device}{SmartDevice}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}}}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a90651ebea9a35ec4e018c8157492e17c}{ON}},\ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}{OFF}}\ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ \mbox{\hyperlink{class_smart_device_a58e6bf5fe4e42e441d3c08ae05b87e33}{name}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}}\ \mbox{\hyperlink{class_smart_device_a8d7f1bf6273b6da8c9e20f911ba9a155}{statu}};\ \ \ \ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}}}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9ed5270571c7d513f5f1f5877be01e5a}{Refrigerator}},\ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a91e0b95db0c752d879aebd0ac65a7fb9}{Thermostat}},\ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9914a0ce04a7b7b6a8e39bec55064b82}{Light}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}{WaterPurifier}},\ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a963695ded6583fecdbda7392e973ac6c}{Elevator}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a6439bc5f8000f6038dbd95d6c677c25a}{Curtain}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_security_camera}{SecurityCamera}}\ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}}\ \mbox{\hyperlink{class_smart_device_aa8c81ecd4c43abc4160360737775452f}{type}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ Fl\_Text\_Buffer\ *\mbox{\hyperlink{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e}{notificationBuffer}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_smart_device_ac8b67d82d005abcb1568a8358925cc06}{hour}};\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_smart_device_a329d12903870677209b99e813b6c1c5a}{SmartDevice}}(std::string\ deviceName)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_smart_device_a58e6bf5fe4e42e441d3c08ae05b87e33}{name}}(deviceName),\ \mbox{\hyperlink{class_smart_device_a8d7f1bf6273b6da8c9e20f911ba9a155}{statu}}(\mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}}::\mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}{OFF}})\ \{\}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_smart_device_a1dc719fc9802d21ef8c10d17993f6adf}{\string~SmartDevice}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_smart_device_a1f89cf450727c5d9751151af749a079d}{getName}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c}{deviceCallback}}(Fl\_Widget\ *widget,\ \textcolor{keywordtype}{void}\ *data)\ =\ 0;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_smart_device_ae1e53057be9260647796af4b68f35f7b}{addNotification}}(\textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00109\ \ \ \ \ json\ \mbox{\hyperlink{class_smart_device_a85587057e846c016d4831ff7082aed54}{toJson}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_smart_device}{SmartDevice}}\ *\mbox{\hyperlink{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130}{fromJson}}(\textcolor{keyword}{const}\ json\ \&j);}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SMART\_DEVICE\_H}}
+
+\end{DoxyCode}

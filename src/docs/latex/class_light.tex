@@ -1,0 +1,225 @@
+\doxysection{Light Class Reference}
+\hypertarget{class_light}{}\label{class_light}\index{Light@{Light}}
+
+
+Represents a smart light device.  
+
+
+
+
+{\ttfamily \#include $<$Light.\+h$>$}
+
+
+
+Inheritance diagram for Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_light__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_light__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_a466b50152b2925b6639c26f510ce8bd0}{Light}} (const std\+::string \&device\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize a \doxylink{class_light}{Light} device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a79613afb0cf7788c131091afccb46aef}{turn\+On}} ()
+\begin{DoxyCompactList}\small\item\em Turns the light on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_aee2ab836d8c984756e10e8e301130aa4}{turn\+Off}} ()
+\begin{DoxyCompactList}\small\item\em Turns the light off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_ac2d5aced343c87fb3e4a3d98b01eb2ee}{device\+Callback}} (Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Callback function for light-\/related actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a329d12903870677209b99e813b6c1c5a}{Smart\+Device}} (std\+::string device\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Smart\+Device} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a1f89cf450727c5d9751151af749a079d}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the smart device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smart_device_ae1e53057be9260647796af4b68f35f7b}{add\+Notification}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Adds a notification message to the shared notification buffer. \end{DoxyCompactList}\item 
+json \mbox{\hyperlink{class_smart_device_a85587057e846c016d4831ff7082aed54}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the smart device to a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_light_a65f28b93bbe0cdf0f479b6c1c8031aaf}{notification\+Callback}} (void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Static callback function for light notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130}{from\+Json}} (const json \&j)
+\begin{DoxyCompactList}\small\item\em Deserializes a smart device from a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} \{ \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9ed5270571c7d513f5f1f5877be01e5a}{Refrigerator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a91e0b95db0c752d879aebd0ac65a7fb9}{Thermostat}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9914a0ce04a7b7b6a8e39bec55064b82}{Light}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}{Water\+Purifier}}
+, \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a963695ded6583fecdbda7392e973ac6c}{Elevator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a6439bc5f8000f6038dbd95d6c677c25a}{Curtain}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a92575c047fa512ce4951d122b464b00d}{Security\+Camera}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the type of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the smart device. \end{DoxyCompactList}\item 
+int {\bfseries hour}
+\begin{DoxyCompactList}\small\item\em Hour value for scheduling or timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+static Fl\+\_\+\+Text\+\_\+\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e}{notification\+Buffer}} = new Fl\+\_\+\+Text\+\_\+\+Buffer()
+\begin{DoxyCompactList}\small\item\em Shared notification buffer for all devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} \{ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a90651ebea9a35ec4e018c8157492e17c}{ON}}
+, \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}{OFF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the status of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of the smart device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} {\bfseries statu}
+\begin{DoxyCompactList}\small\item\em Current status of the device (ON or OFF). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a smart light device. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_light_a466b50152b2925b6639c26f510ce8bd0}\index{Light@{Light}!Light@{Light}}
+\index{Light@{Light}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Light()}{Light()}}
+{\footnotesize\ttfamily \label{class_light_a466b50152b2925b6639c26f510ce8bd0} 
+Light\+::\+Light (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{device\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize a \doxylink{class_light}{Light} device. 
+
+Constructor for the \doxylink{class_light}{Light} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & Name of the light device.\\
+\hline
+\end{DoxyParams}
+Initializes the \doxylink{class_light}{Light} object with a device name and sets the device type to "{}\+Light."{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & The name of the light device. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_light_ac2d5aced343c87fb3e4a3d98b01eb2ee}\index{Light@{Light}!deviceCallback@{deviceCallback}}
+\index{deviceCallback@{deviceCallback}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{deviceCallback()}{deviceCallback()}}
+{\footnotesize\ttfamily \label{class_light_ac2d5aced343c87fb3e4a3d98b01eb2ee} 
+void Light\+::device\+Callback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Callback function for light-\/related actions. 
+
+Callback function triggered by the light button.
+
+Toggles the light\textquotesingle{}s status between ON and OFF, updates the button appearance, and generates a corresponding notification.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & Pointer to the widget triggering the callback. \\
+\hline
+{\em data} & Pointer to user-\/defined data, expected to be a \doxylink{class_light}{Light} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c}{Smart\+Device}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_light_ac2d5aced343c87fb3e4a3d98b01eb2ee_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_light_a65f28b93bbe0cdf0f479b6c1c8031aaf}\index{Light@{Light}!notificationCallback@{notificationCallback}}
+\index{notificationCallback@{notificationCallback}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{notificationCallback()}{notificationCallback()}}
+{\footnotesize\ttfamily \label{class_light_a65f28b93bbe0cdf0f479b6c1c8031aaf} 
+void Light\+::notification\+Callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static callback function for light notifications. 
+
+Callback function for handling light notifications.
+
+Generates a notification based on the current status of the light (ON or OFF).
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the \doxylink{class_light}{Light} object triggering the callback. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_light_a65f28b93bbe0cdf0f479b6c1c8031aaf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_light_aee2ab836d8c984756e10e8e301130aa4}\index{Light@{Light}!turnOff@{turnOff}}
+\index{turnOff@{turnOff}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{turnOff()}{turnOff()}}
+{\footnotesize\ttfamily \label{class_light_aee2ab836d8c984756e10e8e301130aa4} 
+void Light\+::turn\+Off (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Turns the light off. 
+
+Turns the light off by updating its status. \Hypertarget{class_light_a79613afb0cf7788c131091afccb46aef}\index{Light@{Light}!turnOn@{turnOn}}
+\index{turnOn@{turnOn}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{turnOn()}{turnOn()}}
+{\footnotesize\ttfamily \label{class_light_a79613afb0cf7788c131091afccb46aef} 
+void Light\+::turn\+On (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Turns the light on. 
+
+Turns the light on by updating its status. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_light_8h}{Light.\+h}}\item 
+\mbox{\hyperlink{_light_8cpp}{Light.\+cpp}}\end{DoxyCompactItemize}

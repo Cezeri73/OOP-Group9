@@ -1,0 +1,17 @@
+<map id="AddDeviceScreen.cpp" name="AddDeviceScreen.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the AddDeviceScreen class." alt="" coords="249,5,400,31"/>
+<area shape="rect" id="Node000002" href="$_add_device_screen_8h.html" title="Header file for the AddDeviceScreen class." alt="" coords="256,79,393,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="327,31,327,63,322,63,322,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,95,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,108,110,151,109,146,277,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="119,153,173,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="295,108,188,150,186,145,293,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="197,153,314,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="315,107,279,143,276,140,311,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="339,153,452,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="338,103,375,140,371,143,334,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="476,153,586,178"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="361,103,483,145,481,150,359,108"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="610,153,706,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="382,103,596,148,594,153,381,108"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SecurityCamera" name="SecurityCamera">
+<area shape="rect" id="Node000001" title="Represents a smart security camera in the smart home system." alt="" coords="5,323,131,450"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html" title="Abstract base class for all smart devices in the smart home system." alt="" coords="7,5,129,275"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,290,71,323,66,323,66,290"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Light::notificationCallback" name="Light::notificationCallback">
+<area shape="rect" id="Node000001" title="Static callback function for light notifications." alt="" coords="5,5,177,31"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="225,5,417,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,16,209,16,209,21,177,21"/>
+</map>

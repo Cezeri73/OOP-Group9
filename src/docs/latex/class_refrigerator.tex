@@ -1,0 +1,257 @@
+\doxysection{Refrigerator Class Reference}
+\hypertarget{class_refrigerator}{}\label{class_refrigerator}\index{Refrigerator@{Refrigerator}}
+
+
+Represents a smart refrigerator in the smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Refrigerator.\+h$>$}
+
+
+
+Inheritance diagram for Refrigerator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_refrigerator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Refrigerator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_refrigerator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_refrigerator_aa179d6cafb6a93e3de79325dbbfa5645}{Refrigerator}} (const std\+::string \&device\+Name, int initial\+Stock=10)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_refrigerator}{Refrigerator} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_refrigerator_acc03bc7d3515597e8961fb293a45193d}{device\+Callback}} (Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Callback function for handling device-\/specific actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_refrigerator_a3b1e1a5942633effd2c4bc0781a32872}{check\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Checks the current stock level and updates the status accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_refrigerator_abc7e2148e42f0a88b0db13959f3f04a4}{adjust\+Stock}} (int amount)
+\begin{DoxyCompactList}\small\item\em Adjusts the refrigerator\textquotesingle{}s stock level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_refrigerator_a2544650d8db996b0a00c6f013e622350}{get\+Stock\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current stock level of the refrigerator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a329d12903870677209b99e813b6c1c5a}{Smart\+Device}} (std\+::string device\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Smart\+Device} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a1f89cf450727c5d9751151af749a079d}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the smart device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smart_device_ae1e53057be9260647796af4b68f35f7b}{add\+Notification}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Adds a notification message to the shared notification buffer. \end{DoxyCompactList}\item 
+json \mbox{\hyperlink{class_smart_device_a85587057e846c016d4831ff7082aed54}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the smart device to a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_refrigerator_a6b17782add63fd757f1f4d150f5923ad}\label{class_refrigerator_a6b17782add63fd757f1f4d150f5923ad} 
+std\+::string {\bfseries status}
+\begin{DoxyCompactList}\small\item\em Current status of the refrigerator (e.\+g., "{}\+Low Stock"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the smart device. \end{DoxyCompactList}\item 
+int {\bfseries hour}
+\begin{DoxyCompactList}\small\item\em Hour value for scheduling or timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} \{ \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9ed5270571c7d513f5f1f5877be01e5a}{Refrigerator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a91e0b95db0c752d879aebd0ac65a7fb9}{Thermostat}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9914a0ce04a7b7b6a8e39bec55064b82}{Light}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}{Water\+Purifier}}
+, \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a963695ded6583fecdbda7392e973ac6c}{Elevator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a6439bc5f8000f6038dbd95d6c677c25a}{Curtain}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a92575c047fa512ce4951d122b464b00d}{Security\+Camera}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the type of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130}{from\+Json}} (const json \&j)
+\begin{DoxyCompactList}\small\item\em Deserializes a smart device from a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+static Fl\+\_\+\+Text\+\_\+\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e}{notification\+Buffer}} = new Fl\+\_\+\+Text\+\_\+\+Buffer()
+\begin{DoxyCompactList}\small\item\em Shared notification buffer for all devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} \{ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a90651ebea9a35ec4e018c8157492e17c}{ON}}
+, \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}{OFF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the status of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of the smart device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} {\bfseries statu}
+\begin{DoxyCompactList}\small\item\em Current status of the device (ON or OFF). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a smart refrigerator in the smart home system. 
+
+This class provides functionality to manage and monitor the stock level of a refrigerator, including notifications for low stock and the ability to adjust stock levels. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_refrigerator_aa179d6cafb6a93e3de79325dbbfa5645}\index{Refrigerator@{Refrigerator}!Refrigerator@{Refrigerator}}
+\index{Refrigerator@{Refrigerator}!Refrigerator@{Refrigerator}}
+\doxysubsubsection{\texorpdfstring{Refrigerator()}{Refrigerator()}}
+{\footnotesize\ttfamily \label{class_refrigerator_aa179d6cafb6a93e3de79325dbbfa5645} 
+Refrigerator\+::\+Refrigerator (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{device\+Name}{, }\item[{int}]{initial\+Stock}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_refrigerator}{Refrigerator} class. 
+
+Initializes the refrigerator with a given device name and an initial stock level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & Name of the refrigerator device. \\
+\hline
+{\em initial\+Stock} & Initial stock level (default is 10 units).\\
+\hline
+\end{DoxyParams}
+Initializes the refrigerator with a given device name and initial stock level. Sets the device type to "{}\+Refrigerator."{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & The name of the refrigerator device. \\
+\hline
+{\em initial\+Stock} & The initial stock level in the refrigerator. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_refrigerator_abc7e2148e42f0a88b0db13959f3f04a4}\index{Refrigerator@{Refrigerator}!adjustStock@{adjustStock}}
+\index{adjustStock@{adjustStock}!Refrigerator@{Refrigerator}}
+\doxysubsubsection{\texorpdfstring{adjustStock()}{adjustStock()}}
+{\footnotesize\ttfamily \label{class_refrigerator_abc7e2148e42f0a88b0db13959f3f04a4} 
+void Refrigerator\+::adjust\+Stock (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Adjusts the refrigerator\textquotesingle{}s stock level. 
+
+Updates the stock level to the specified amount. If the stock level is below zero, it is reset to zero. Generates a notification about the updated stock level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The new stock level to set.\\
+\hline
+\end{DoxyParams}
+Sets the stock level to the specified amount and ensures it is non-\/negative. Generates a notification about the updated stock level and checks the stock status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The new stock level to set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_refrigerator_abc7e2148e42f0a88b0db13959f3f04a4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_refrigerator_a3b1e1a5942633effd2c4bc0781a32872}\index{Refrigerator@{Refrigerator}!checkStock@{checkStock}}
+\index{checkStock@{checkStock}!Refrigerator@{Refrigerator}}
+\doxysubsubsection{\texorpdfstring{checkStock()}{checkStock()}}
+{\footnotesize\ttfamily \label{class_refrigerator_a3b1e1a5942633effd2c4bc0781a32872} 
+void Refrigerator\+::check\+Stock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks the current stock level and updates the status accordingly. 
+
+Checks the stock level and updates the refrigerator\textquotesingle{}s status.
+
+Sets the status to "{}\+Low Stock"{} if the stock level is below 5, otherwise sets it to "{}\+Sufficient Stock."{}
+
+If the stock is below 5 units, the status is set to "{}\+Low Stock."{} Otherwise, it is set to "{}\+Sufficient Stock."{} \Hypertarget{class_refrigerator_acc03bc7d3515597e8961fb293a45193d}\index{Refrigerator@{Refrigerator}!deviceCallback@{deviceCallback}}
+\index{deviceCallback@{deviceCallback}!Refrigerator@{Refrigerator}}
+\doxysubsubsection{\texorpdfstring{deviceCallback()}{deviceCallback()}}
+{\footnotesize\ttfamily \label{class_refrigerator_acc03bc7d3515597e8961fb293a45193d} 
+void Refrigerator\+::device\+Callback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Callback function for handling device-\/specific actions. 
+
+Callback function for the refrigerator\textquotesingle{}s device-\/specific actions.
+
+This function displays notifications about the refrigerator\textquotesingle{}s stock level and allows users to update the stock via a UI.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & Pointer to the triggering widget. \\
+\hline
+{\em data} & User-\/defined data, expected to be a \doxylink{class_refrigerator}{Refrigerator} object.\\
+\hline
+\end{DoxyParams}
+Displays notifications about the stock level and opens a window for updating the stock level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & Pointer to the widget triggering the callback. \\
+\hline
+{\em data} & Pointer to the \doxylink{class_refrigerator}{Refrigerator} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c}{Smart\+Device}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_refrigerator_acc03bc7d3515597e8961fb293a45193d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_refrigerator_a2544650d8db996b0a00c6f013e622350}\index{Refrigerator@{Refrigerator}!getStockLevel@{getStockLevel}}
+\index{getStockLevel@{getStockLevel}!Refrigerator@{Refrigerator}}
+\doxysubsubsection{\texorpdfstring{getStockLevel()}{getStockLevel()}}
+{\footnotesize\ttfamily \label{class_refrigerator_a2544650d8db996b0a00c6f013e622350} 
+int Refrigerator\+::get\+Stock\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current stock level of the refrigerator. 
+
+Gets the current stock level of the refrigerator.
+
+\begin{DoxyReturn}{Returns}
+The current stock level. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_refrigerator_8h}{Refrigerator.\+h}}\item 
+\mbox{\hyperlink{_refrigerator_8cpp}{Refrigerator.\+cpp}}\end{DoxyCompactItemize}

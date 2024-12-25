@@ -1,0 +1,7 @@
+<map id="Thermostat::confirm" name="Thermostat::confirm">
+<area shape="rect" id="Node000001" title="Confirms the selected temperature." alt="" coords="5,13,144,38"/>
+<area shape="rect" id="Node000002" href="$class_thermostat.html#a4e055d9ed4b01fbc5a24cf26b10f3629" title="Sets the thermostat&#39;s temperature." alt="" coords="192,13,377,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,23,176,23,176,28,144,28"/>
+<area shape="rect" id="Node000003" href="$class_thermostat.html#a5783792ddcd2567463fb201562c1a31c" title="Callback function to generate a notification." alt="" coords="425,5,583,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,23,410,23,410,28,377,28"/>
+</map>

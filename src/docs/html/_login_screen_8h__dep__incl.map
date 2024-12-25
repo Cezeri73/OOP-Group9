@@ -1,0 +1,7 @@
+<map id="LoginScreen.h" name="LoginScreen.h">
+<area shape="rect" id="Node000001" title="Header file for the LoginScreen class, providing a GUI for user authentication." alt="" coords="72,5,177,31"/>
+<area shape="rect" id="Node000002" href="$_login_screen_8cpp.html" title="Implementation of the LoginScreen class, providing a GUI for user authentication." alt="" coords="5,79,124,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,44,77,80,73,77,103,41"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the Smart Home Control Panel application." alt="" coords="147,79,222,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,41,176,77,172,80,142,44"/>
+</map>

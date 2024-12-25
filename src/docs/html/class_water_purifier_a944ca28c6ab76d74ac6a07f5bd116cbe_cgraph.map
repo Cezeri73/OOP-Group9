@@ -1,0 +1,7 @@
+<map id="WaterPurifier::deviceCallback" name="WaterPurifier::deviceCallback">
+<area shape="rect" id="Node000001" title="Callback function for the water purifier device." alt="" coords="5,31,199,56"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="249,5,442,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,31,233,27,234,32,199,36"/>
+<area shape="rect" id="Node000003" href="$class_water_purifier.html#a9373d631b7b2615026e96ae575e82be8" title="Retrieves the current water quality of the purifier." alt="" coords="247,55,444,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,50,231,54,231,59,199,56"/>
+</map>

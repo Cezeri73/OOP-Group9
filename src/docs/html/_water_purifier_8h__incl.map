@@ -1,0 +1,30 @@
+<map id="WaterPurifier.h" name="WaterPurifier.h">
+<area shape="rect" id="Node000001" title="Header file for the WaterPurifier class, representing a smart water purifier device." alt="" coords="458,5,564,31"/>
+<area shape="rect" id="Node000002" href="$_smart_device_8h.html" title="Header file for the SmartDevice class, representing the base class for all smart devices." alt="" coords="403,79,512,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,33,478,68,473,65,500,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,59,178"/>
+<area shape="poly" id="edge12_Node000001_Node000003" title=" " alt="" coords="471,34,74,154,73,149,470,29"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="536,79,595,105"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="522,30,549,65,545,68,518,33"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="619,79,672,105"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="535,29,610,69,608,74,532,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,102,259,121,74,155,73,150,258,116,403,97"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="83,153,154,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="403,106,170,155,169,149,402,101"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="178,153,243,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="416,108,259,153,258,148,415,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,153,385,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="436,108,363,147,361,143,434,103"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="410,153,505,178"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="460,105,460,137,455,137,455,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="529,153,639,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="480,103,551,142,548,147,478,108"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="663,153,809,178"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="505,103,675,146,673,151,504,108"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="833,153,935,178"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="512,100,524,102,818,149,817,155,524,107,511,105"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="959,153,1097,178"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="512,100,524,102,732,127,944,150,943,155,732,132,524,107,511,105"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1122,153,1252,178"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="512,100,524,102,686,119,814,127,942,135,1106,150,1106,155,942,140,813,132,686,124,524,107,511,106"/>
+</map>

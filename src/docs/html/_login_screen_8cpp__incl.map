@@ -1,0 +1,17 @@
+<map id="LoginScreen.cpp" name="LoginScreen.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the LoginScreen class, providing a GUI for user authentication." alt="" coords="324,5,442,31"/>
+<area shape="rect" id="Node000002" href="$_login_screen_8h.html" title="Header file for the LoginScreen class, providing a GUI for user authentication." alt="" coords="209,79,314,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,34,297,73,294,68,361,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="338,79,427,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="385,31,385,63,380,63,380,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="452,79,505,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="401,29,452,68,449,72,397,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,123,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,108,113,150,111,144,227,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="147,153,248,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="253,107,220,143,216,139,249,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="272,153,382,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="274,103,307,139,303,143,270,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="406,153,501,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="295,103,407,144,406,149,293,108"/>
+</map>

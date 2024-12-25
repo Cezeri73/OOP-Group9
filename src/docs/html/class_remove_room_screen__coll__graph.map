@@ -1,0 +1,3 @@
+<map id="RemoveRoomScreen" name="RemoveRoomScreen">
+<area shape="rect" id="Node000001" title="Represents the GUI for removing a room in the smart home system." alt="" coords="5,5,162,112"/>
+</map>

@@ -1,0 +1,329 @@
+\doxysection{Smart\+Device Class Reference}
+\hypertarget{class_smart_device}{}\label{class_smart_device}\index{SmartDevice@{SmartDevice}}
+
+
+Abstract base class for all smart devices in the smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Device.\+h$>$}
+
+
+
+Inheritance diagram for Smart\+Device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_smart_device__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Smart\+Device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_smart_device__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} \{ \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9ed5270571c7d513f5f1f5877be01e5a}{Refrigerator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a91e0b95db0c752d879aebd0ac65a7fb9}{Thermostat}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9914a0ce04a7b7b6a8e39bec55064b82}{Light}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}{Water\+Purifier}}
+, \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a963695ded6583fecdbda7392e973ac6c}{Elevator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a6439bc5f8000f6038dbd95d6c677c25a}{Curtain}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a92575c047fa512ce4951d122b464b00d}{Security\+Camera}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the type of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a329d12903870677209b99e813b6c1c5a}{Smart\+Device}} (std\+::string device\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_smart_device_a1dc719fc9802d21ef8c10d17993f6adf}\label{class_smart_device_a1dc719fc9802d21ef8c10d17993f6adf} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Smart\+Device} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a1f89cf450727c5d9751151af749a079d}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the smart device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c}{device\+Callback}} (Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}widget, void \texorpdfstring{$\ast$}{*}data)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to handle device-\/specific actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smart_device_ae1e53057be9260647796af4b68f35f7b}{add\+Notification}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Adds a notification message to the shared notification buffer. \end{DoxyCompactList}\item 
+json \mbox{\hyperlink{class_smart_device_a85587057e846c016d4831ff7082aed54}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the smart device to a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130}{from\+Json}} (const json \&j)
+\begin{DoxyCompactList}\small\item\em Deserializes a smart device from a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_smart_device_aa8c81ecd4c43abc4160360737775452f}\label{class_smart_device_aa8c81ecd4c43abc4160360737775452f} 
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the smart device. \end{DoxyCompactList}\item 
+\Hypertarget{class_smart_device_ac8b67d82d005abcb1568a8358925cc06}\label{class_smart_device_ac8b67d82d005abcb1568a8358925cc06} 
+int {\bfseries hour}
+\begin{DoxyCompactList}\small\item\em Hour value for scheduling or timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Fl\+\_\+\+Text\+\_\+\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e}{notification\+Buffer}} = new Fl\+\_\+\+Text\+\_\+\+Buffer()
+\begin{DoxyCompactList}\small\item\em Shared notification buffer for all devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} \{ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a90651ebea9a35ec4e018c8157492e17c}{ON}}
+, \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}{OFF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the status of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_smart_device_a58e6bf5fe4e42e441d3c08ae05b87e33}\label{class_smart_device_a58e6bf5fe4e42e441d3c08ae05b87e33} 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of the smart device. \end{DoxyCompactList}\item 
+\Hypertarget{class_smart_device_a8d7f1bf6273b6da8c9e20f911ba9a155}\label{class_smart_device_a8d7f1bf6273b6da8c9e20f911ba9a155} 
+\mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} {\bfseries statu}
+\begin{DoxyCompactList}\small\item\em Current status of the device (ON or OFF). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all smart devices in the smart home system. 
+
+Provides common functionality and properties for all smart devices, such as notifications, status, and type management. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_smart_device_a6884181ca312ce007a3904b9932b9229}\index{SmartDevice@{SmartDevice}!Statu@{Statu}}
+\index{Statu@{Statu}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{Statu}{Statu}}
+{\footnotesize\ttfamily \label{class_smart_device_a6884181ca312ce007a3904b9932b9229} 
+enum class \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Smart\+Device\+::\+Statu}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+
+
+Enumeration representing the status of a smart device. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON@{ON}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!ON@{ON}}}\Hypertarget{class_smart_device_a6884181ca312ce007a3904b9932b9229a90651ebea9a35ec4e018c8157492e17c}\label{class_smart_device_a6884181ca312ce007a3904b9932b9229} 
+ON&Device is turned on. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!OFF@{OFF}}}\Hypertarget{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}\label{class_smart_device_a6884181ca312ce007a3904b9932b9229} 
+OFF&Device is turned off. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}\index{SmartDevice@{SmartDevice}!Type@{Type}}
+\index{Type@{Type}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+enum class \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Smart\+Device\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration representing the type of a smart device. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Refrigerator@{Refrigerator}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!Refrigerator@{Refrigerator}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9ed5270571c7d513f5f1f5877be01e5a}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Refrigerator&Represents a refrigerator device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Thermostat@{Thermostat}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!Thermostat@{Thermostat}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a91e0b95db0c752d879aebd0ac65a7fb9}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Thermostat&Represents a thermostat device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Light@{Light}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!Light@{Light}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9914a0ce04a7b7b6a8e39bec55064b82}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Light&Represents a light device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WaterPurifier@{WaterPurifier}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!WaterPurifier@{WaterPurifier}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Water\+Purifier&Represents a water purifier device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Elevator@{Elevator}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!Elevator@{Elevator}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a963695ded6583fecdbda7392e973ac6c}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Elevator&Represents an elevator device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Curtain@{Curtain}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!Curtain@{Curtain}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a6439bc5f8000f6038dbd95d6c677c25a}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Curtain&Represents a curtain device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SecurityCamera@{SecurityCamera}!SmartDevice@{SmartDevice}}\index{SmartDevice@{SmartDevice}!SecurityCamera@{SecurityCamera}}}\Hypertarget{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a92575c047fa512ce4951d122b464b00d}\label{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4} 
+Security\+Camera&Represents a security camera device. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_smart_device_a329d12903870677209b99e813b6c1c5a}\index{SmartDevice@{SmartDevice}!SmartDevice@{SmartDevice}}
+\index{SmartDevice@{SmartDevice}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{SmartDevice()}{SmartDevice()}}
+{\footnotesize\ttfamily \label{class_smart_device_a329d12903870677209b99e813b6c1c5a} 
+Smart\+Device\+::\+Smart\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{device\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \doxylink{class_smart_device}{Smart\+Device} class. 
+
+Initializes a smart device with a given name and sets its status to OFF.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & The name of the smart device. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_smart_device_ae1e53057be9260647796af4b68f35f7b}\index{SmartDevice@{SmartDevice}!addNotification@{addNotification}}
+\index{addNotification@{addNotification}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{addNotification()}{addNotification()}}
+{\footnotesize\ttfamily \label{class_smart_device_ae1e53057be9260647796af4b68f35f7b} 
+void Smart\+Device\+::add\+Notification (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Adds a notification message to the shared notification buffer. 
+
+Adds a notification message to the notification buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message to add.\\
+\hline
+\end{DoxyParams}
+Appends the provided message to the shared notification buffer, followed by a newline character.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c}\index{SmartDevice@{SmartDevice}!deviceCallback@{deviceCallback}}
+\index{deviceCallback@{deviceCallback}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{deviceCallback()}{deviceCallback()}}
+{\footnotesize\ttfamily \label{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c} 
+virtual void Smart\+Device\+::device\+Callback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to handle device-\/specific actions. 
+
+Must be implemented by derived classes to handle user interaction via the GUI.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & Pointer to the widget triggering the callback. \\
+\hline
+{\em data} & User-\/defined data, typically the smart device instance. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_curtain_afa7c079b5105345d900d36afa0057ab5}{Curtain}}, \mbox{\hyperlink{class_elevator_a84ad48ee317e8b29e666d3b85b8835e6}{Elevator}}, \mbox{\hyperlink{class_light_ac2d5aced343c87fb3e4a3d98b01eb2ee}{Light}}, \mbox{\hyperlink{class_refrigerator_acc03bc7d3515597e8961fb293a45193d}{Refrigerator}}, \mbox{\hyperlink{class_security_camera_afb09ef10e181261661cc4288aa333d59}{Security\+Camera}}, \mbox{\hyperlink{class_thermostat_afd10ac587f8f5a8dbbd675c61cc5e5c6}{Thermostat}}, and \mbox{\hyperlink{class_water_purifier_a944ca28c6ab76d74ac6a07f5bd116cbe}{Water\+Purifier}}.
+
+\Hypertarget{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130}\index{SmartDevice@{SmartDevice}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily \label{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130} 
+\mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*} Smart\+Device\+::from\+Json (\begin{DoxyParamCaption}\item[{const json \&}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Deserializes a smart device from a JSON representation. 
+
+Deserializes a \doxylink{class_smart_device}{Smart\+Device} object from a JSON representation.
+
+Recreates a smart device object based on the type specified in the JSON data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & A JSON object containing the device\textquotesingle{}s data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created \doxylink{class_smart_device}{Smart\+Device} object, or nullptr if the type is unrecognized.
+\end{DoxyReturn}
+Recreates a \doxylink{class_smart_device}{Smart\+Device} object based on the type specified in the JSON data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & A JSON object containing the device\textquotesingle{}s data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created \doxylink{class_smart_device}{Smart\+Device} object, or nullptr if the type is unrecognized. 
+\end{DoxyReturn}
+\Hypertarget{class_smart_device_a1f89cf450727c5d9751151af749a079d}\index{SmartDevice@{SmartDevice}!getName@{getName}}
+\index{getName@{getName}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_smart_device_a1f89cf450727c5d9751151af749a079d} 
+const char \texorpdfstring{$\ast$}{*} Smart\+Device\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of the smart device. 
+
+Returns the name of the \doxylink{class_smart_device}{Smart\+Device} as a C-\/style string.
+
+\begin{DoxyReturn}{Returns}
+The name of the device as a C-\/style string.
+\end{DoxyReturn}
+Converts the {\ttfamily name} string to a C-\/style string and returns it.
+
+\begin{DoxyReturn}{Returns}
+The name of the device as a C-\/style string. 
+\end{DoxyReturn}
+\Hypertarget{class_smart_device_a85587057e846c016d4831ff7082aed54}\index{SmartDevice@{SmartDevice}!toJson@{toJson}}
+\index{toJson@{toJson}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily \label{class_smart_device_a85587057e846c016d4831ff7082aed54} 
+json Smart\+Device\+::to\+Json (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Serializes the smart device to a JSON representation. 
+
+Serializes the \doxylink{class_smart_device}{Smart\+Device} object to a JSON representation.
+
+Converts the device\textquotesingle{}s type into a JSON object for saving or transferring.
+
+\begin{DoxyReturn}{Returns}
+A JSON object containing the device\textquotesingle{}s type.
+\end{DoxyReturn}
+Converts the device type into a JSON object for saving or transferring.
+
+\begin{DoxyReturn}{Returns}
+A JSON object containing the device\textquotesingle{}s type. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e}\index{SmartDevice@{SmartDevice}!notificationBuffer@{notificationBuffer}}
+\index{notificationBuffer@{notificationBuffer}!SmartDevice@{SmartDevice}}
+\doxysubsubsection{\texorpdfstring{notificationBuffer}{notificationBuffer}}
+{\footnotesize\ttfamily \label{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e} 
+Fl\+\_\+\+Text\+\_\+\+Buffer \texorpdfstring{$\ast$}{*} Smart\+Device\+::notification\+Buffer = new Fl\+\_\+\+Text\+\_\+\+Buffer()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Shared notification buffer for all devices. 
+
+Static notification buffer shared by all \doxylink{class_smart_device}{Smart\+Device} objects.
+
+This buffer is used to store and display notifications generated by smart devices. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_smart_device_8h}{Smart\+Device.\+h}}\item 
+\mbox{\hyperlink{_smart_device_8cpp}{Smart\+Device.\+cpp}}\end{DoxyCompactItemize}

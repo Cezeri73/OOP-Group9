@@ -1,0 +1,254 @@
+\doxysection{Water\+Purifier Class Reference}
+\hypertarget{class_water_purifier}{}\label{class_water_purifier}\index{WaterPurifier@{WaterPurifier}}
+
+
+Represents a smart water purifier in the smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Water\+Purifier.\+h$>$}
+
+
+
+Inheritance diagram for Water\+Purifier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_water_purifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Water\+Purifier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_water_purifier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_water_purifier_a57c5c40c1a6774e4a5b7eca4884320f0}{Water\+Purifier}} (const std\+::string \&device\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_water_purifier}{Water\+Purifier} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_water_purifier_aa44d7e598f5914061a69a8ffb8a205b0}{\texorpdfstring{$\sim$}{\string~}\+Water\+Purifier}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_water_purifier}{Water\+Purifier} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_water_purifier_a944ca28c6ab76d74ac6a07f5bd116cbe}{device\+Callback}} (Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Callback function for the water purifier device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_water_purifier_a9373d631b7b2615026e96ae575e82be8}{get\+Water\+Quality}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current water quality of the purifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a329d12903870677209b99e813b6c1c5a}{Smart\+Device}} (std\+::string device\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Smart\+Device} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_smart_device}{Smart\+Device} class. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a1f89cf450727c5d9751151af749a079d}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the smart device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smart_device_ae1e53057be9260647796af4b68f35f7b}{add\+Notification}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Adds a notification message to the shared notification buffer. \end{DoxyCompactList}\item 
+json \mbox{\hyperlink{class_smart_device_a85587057e846c016d4831ff7082aed54}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the smart device to a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_water_purifier_ad3c347c00c5abadc997efb3aa267d8b1}{decrease\+Quality\+Callback}} (void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Callback function to decrease water quality over time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_smart_device}{Smart\+Device}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a8c549a15e362bbd5aa7d80ad073ca130}{from\+Json}} (const json \&j)
+\begin{DoxyCompactList}\small\item\em Deserializes a smart device from a JSON representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} \{ \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9ed5270571c7d513f5f1f5877be01e5a}{Refrigerator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a91e0b95db0c752d879aebd0ac65a7fb9}{Thermostat}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a9914a0ce04a7b7b6a8e39bec55064b82}{Light}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}{Water\+Purifier}}
+, \newline
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a963695ded6583fecdbda7392e973ac6c}{Elevator}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a6439bc5f8000f6038dbd95d6c677c25a}{Curtain}}
+, \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a92575c047fa512ce4951d122b464b00d}{Security\+Camera}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the type of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4}{Type}} {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the smart device. \end{DoxyCompactList}\item 
+int {\bfseries hour}
+\begin{DoxyCompactList}\small\item\em Hour value for scheduling or timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+static Fl\+\_\+\+Text\+\_\+\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_smart_device_a097583f449c1c58a07c21ef2eb1fe05e}{notification\+Buffer}} = new Fl\+\_\+\+Text\+\_\+\+Buffer()
+\begin{DoxyCompactList}\small\item\em Shared notification buffer for all devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} \{ \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a90651ebea9a35ec4e018c8157492e17c}{ON}}
+, \mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229a88559a0cfd8250c9d65970cc145c92d4}{OFF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the status of a smart device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_smart_device}{Smart\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of the smart device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_smart_device_a6884181ca312ce007a3904b9932b9229}{Statu}} {\bfseries statu}
+\begin{DoxyCompactList}\small\item\em Current status of the device (ON or OFF). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a smart water purifier in the smart home system. 
+
+The \doxylink{class_water_purifier}{Water\+Purifier} class monitors water quality, decreases quality over time, and provides user interaction to check and manage the device\textquotesingle{}s state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_water_purifier_a57c5c40c1a6774e4a5b7eca4884320f0}\index{WaterPurifier@{WaterPurifier}!WaterPurifier@{WaterPurifier}}
+\index{WaterPurifier@{WaterPurifier}!WaterPurifier@{WaterPurifier}}
+\doxysubsubsection{\texorpdfstring{WaterPurifier()}{WaterPurifier()}}
+{\footnotesize\ttfamily \label{class_water_purifier_a57c5c40c1a6774e4a5b7eca4884320f0} 
+Water\+Purifier\+::\+Water\+Purifier (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{device\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_water_purifier}{Water\+Purifier} class. 
+
+Initializes the water purifier with a given name and sets the water quality to 100 (excellent).
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & The name of the water purifier device.\\
+\hline
+\end{DoxyParams}
+Initializes the water purifier with a given name and sets the water quality to 100 (excellent). Also sets the device type to "{}\+Water\+Purifier"{} and schedules a recurring callback to decrease water quality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & The name of the water purifier device. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_water_purifier_a57c5c40c1a6774e4a5b7eca4884320f0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_water_purifier_aa44d7e598f5914061a69a8ffb8a205b0}\index{WaterPurifier@{WaterPurifier}!````~WaterPurifier@{\texorpdfstring{$\sim$}{\string~}WaterPurifier}}
+\index{````~WaterPurifier@{\texorpdfstring{$\sim$}{\string~}WaterPurifier}!WaterPurifier@{WaterPurifier}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WaterPurifier()}{\string~WaterPurifier()}}
+{\footnotesize\ttfamily \label{class_water_purifier_aa44d7e598f5914061a69a8ffb8a205b0} 
+Water\+Purifier\+::\texorpdfstring{$\sim$}{\string~}\+Water\+Purifier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{class_water_purifier}{Water\+Purifier} class. 
+
+Cleans up resources associated with the \doxylink{class_water_purifier}{Water\+Purifier} object.
+
+Frees the memory allocated for the \doxylink{class_water_purifier}{Water\+Purifier} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_water_purifier_ad3c347c00c5abadc997efb3aa267d8b1}\index{WaterPurifier@{WaterPurifier}!decreaseQualityCallback@{decreaseQualityCallback}}
+\index{decreaseQualityCallback@{decreaseQualityCallback}!WaterPurifier@{WaterPurifier}}
+\doxysubsubsection{\texorpdfstring{decreaseQualityCallback()}{decreaseQualityCallback()}}
+{\footnotesize\ttfamily \label{class_water_purifier_ad3c347c00c5abadc997efb3aa267d8b1} 
+void Water\+Purifier\+::decrease\+Quality\+Callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback function to decrease water quality over time. 
+
+Callback function to decrease the water quality over time.
+
+This function is called at regular intervals to simulate a decrease in water quality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the \doxylink{class_water_purifier}{Water\+Purifier} object.\\
+\hline
+\end{DoxyParams}
+Reduces the water quality by a specified amount every 10 seconds. If water quality remains above 0, the callback is rescheduled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the \doxylink{class_water_purifier}{Water\+Purifier} object. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_water_purifier_ad3c347c00c5abadc997efb3aa267d8b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_water_purifier_a944ca28c6ab76d74ac6a07f5bd116cbe}\index{WaterPurifier@{WaterPurifier}!deviceCallback@{deviceCallback}}
+\index{deviceCallback@{deviceCallback}!WaterPurifier@{WaterPurifier}}
+\doxysubsubsection{\texorpdfstring{deviceCallback()}{deviceCallback()}}
+{\footnotesize\ttfamily \label{class_water_purifier_a944ca28c6ab76d74ac6a07f5bd116cbe} 
+void Water\+Purifier\+::device\+Callback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget \texorpdfstring{$\ast$}{*}}]{widget}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Callback function for the water purifier device. 
+
+Handles UI interaction and displays notifications about the current water quality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & Pointer to the widget triggering the callback. \\
+\hline
+{\em data} & Pointer to the \doxylink{class_water_purifier}{Water\+Purifier} object.\\
+\hline
+\end{DoxyParams}
+Handles UI interaction and displays a notification about the current water quality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & Pointer to the widget triggering the callback. \\
+\hline
+{\em data} & Pointer to the \doxylink{class_water_purifier}{Water\+Purifier} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_smart_device_ac1c8e181381d31a24eedbf5607457f5c}{Smart\+Device}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_water_purifier_a944ca28c6ab76d74ac6a07f5bd116cbe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_water_purifier_a9373d631b7b2615026e96ae575e82be8}\index{WaterPurifier@{WaterPurifier}!getWaterQuality@{getWaterQuality}}
+\index{getWaterQuality@{getWaterQuality}!WaterPurifier@{WaterPurifier}}
+\doxysubsubsection{\texorpdfstring{getWaterQuality()}{getWaterQuality()}}
+{\footnotesize\ttfamily \label{class_water_purifier_a9373d631b7b2615026e96ae575e82be8} 
+int Water\+Purifier\+::get\+Water\+Quality (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current water quality of the purifier. 
+
+\begin{DoxyReturn}{Returns}
+The current water quality as a percentage. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_water_purifier_8h}{Water\+Purifier.\+h}}\item 
+\mbox{\hyperlink{_water_purifier_8cpp}{Water\+Purifier.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+<map id="SmartDevice" name="SmartDevice">
+<area shape="rect" id="Node000001" title="Abstract base class for all smart devices in the smart home system." alt="" coords="465,5,587,275"/>
+<area shape="rect" id="Node000002" href="$class_curtain.html" title="Represents a smart curtain device." alt="" coords="5,343,126,471"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,169,383,195,302,231,219,274,141,325,117,346,114,342,138,321,216,269,300,226,381,190,450,164"/>
+<area shape="rect" id="Node000003" href="$class_elevator.html" title="Represents a smart elevator device." alt="" coords="151,364,272,450"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="454,192,371,253,285,325,247,366,243,362,281,321,368,249,451,188"/>
+<area shape="rect" id="Node000004" href="$class_light.html" title="Represents a smart light device." alt="" coords="296,333,442,481"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="460,258,414,335,409,332,455,255"/>
+<area shape="rect" id="Node000005" href="$class_refrigerator.html" title="Represents a smart refrigerator in the smart home system." alt="" coords="465,333,586,481"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="528,290,528,334,523,334,523,290"/>
+<area shape="rect" id="Node000006" href="$class_security_camera.html" title="Represents a smart security camera in the smart home system." alt="" coords="611,343,737,471"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="596,262,641,342,637,345,592,265"/>
+<area shape="rect" id="Node000007" href="$class_thermostat.html" title="Represents a smart thermostat in the smart home system." alt="" coords="761,323,907,491"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="600,196,750,321,763,332,759,336,747,325,596,200"/>
+<area shape="rect" id="Node000008" href="$class_water_purifier.html" title="Represents a smart water purifier in the smart home system." alt="" coords="931,333,1108,481"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="602,167,752,231,838,273,921,321,936,331,933,336,918,325,835,278,750,236,600,172"/>
+</map>

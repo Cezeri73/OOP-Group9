@@ -1,0 +1,32 @@
+\doxysection{Login\+Screen.\+h}
+\hypertarget{_login_screen_8h_source}{}\label{_login_screen_8h_source}\mbox{\hyperlink{_login_screen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Window.H>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Input.H>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Button.H>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Box.H>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_login_screen}{LoginScreen}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_login_screen_aec37192b228273e97a92333a0f1d24ed}{LoginScreen}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_login_screen_acb7fb94f81b3865c2c7173f9d376ccf5}{show}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_login_screen_a66688798057132fb6589d1b5ce2ce669}{authorized}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ Fl\_Window\ *window;\ }
+\DoxyCodeLine{00044\ \ \ \ \ Fl\_Input\ *username\_input;\ }
+\DoxyCodeLine{00045\ \ \ \ \ Fl\_Input\ *password\_input;\ }
+\DoxyCodeLine{00046\ \ \ \ \ Fl\_Button\ *login\_button;\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ login\_cb(Fl\_Widget\ *widget,\ \textcolor{keywordtype}{void}\ *data);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ handle\_login();}
+\DoxyCodeLine{00064\ \};}
+
+\end{DoxyCode}

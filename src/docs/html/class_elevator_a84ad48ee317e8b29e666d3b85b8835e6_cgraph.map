@@ -1,0 +1,5 @@
+<map id="Elevator::deviceCallback" name="Elevator::deviceCallback">
+<area shape="rect" id="Node000001" title="Callback function for elevator&#45;related actions." alt="" coords="5,5,172,31"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="220,5,412,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,16,204,16,204,21,172,21"/>
+</map>

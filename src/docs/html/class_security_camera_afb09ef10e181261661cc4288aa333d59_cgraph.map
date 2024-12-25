@@ -1,0 +1,9 @@
+<map id="SecurityCamera::deviceCallback" name="SecurityCamera::deviceCallback">
+<area shape="rect" id="Node000001" title="Callback method triggered when the camera&#39;s associated button is clicked." alt="" coords="5,55,218,80"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="274,5,466,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,51,283,32,284,37,183,57"/>
+<area shape="rect" id="Node000003" href="$class_security_camera.html#aadaf05f72d9bd0d8a4accafc3b8067d4" title="Starts recording and updates the camera&#39;s status to ON." alt="" coords="266,55,474,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,65,250,65,250,70,218,70"/>
+<area shape="rect" id="Node000004" href="$class_security_camera.html#a8e77bb59b17e3a970b04556069b0b601" title="Stops recording and updates the camera&#39;s status to OFF." alt="" coords="266,104,474,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,78,284,98,283,103,182,84"/>
+</map>

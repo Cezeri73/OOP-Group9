@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_smart_device.html" title="Abstract base class for all smart devices in the smart home system." alt="" coords="5,153,103,179"/>
+<area shape="rect" id="Node000001" href="$class_curtain.html" title="Represents a smart curtain device." alt="" coords="177,5,240,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="68,138,101,89,124,63,149,40,175,26,177,30,152,44,128,67,106,92,72,141"/>
+<area shape="rect" id="Node000002" href="$class_elevator.html" title="Represents a smart elevator device." alt="" coords="174,55,243,80"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="80,141,112,115,149,89,172,78,175,82,152,94,115,119,83,145"/>
+<area shape="rect" id="Node000003" href="$class_light.html" title="Represents a smart light device." alt="" coords="184,104,233,130"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="110,145,182,122,184,127,112,150"/>
+<area shape="rect" id="Node000004" href="$class_refrigerator.html" title="Represents a smart refrigerator in the smart home system." alt="" coords="164,153,253,179"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="118,164,163,164,163,169,118,169"/>
+<area shape="rect" id="Node000005" href="$class_security_camera.html" title="Represents a smart security camera in the smart home system." alt="" coords="151,203,266,228"/>
+<area shape="poly" id="edge6_Node000000_Node000005" title=" " alt="" coords="112,182,166,199,165,205,110,187"/>
+<area shape="rect" id="Node000006" href="$class_thermostat.html" title="Represents a smart thermostat in the smart home system." alt="" coords="165,252,252,278"/>
+<area shape="poly" id="edge7_Node000000_Node000006" title=" " alt="" coords="83,188,115,214,152,239,173,249,171,254,149,243,112,218,80,192"/>
+<area shape="rect" id="Node000007" href="$class_water_purifier.html" title="Represents a smart water purifier in the smart home system." alt="" coords="160,301,256,327"/>
+<area shape="poly" id="edge8_Node000000_Node000007" title=" " alt="" coords="72,191,106,240,128,266,152,288,170,299,167,303,149,292,124,269,101,243,68,194"/>
+</map>

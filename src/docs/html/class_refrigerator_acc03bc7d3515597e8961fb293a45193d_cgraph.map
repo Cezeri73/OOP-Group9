@@ -1,0 +1,13 @@
+<map id="Refrigerator::deviceCallback" name="Refrigerator::deviceCallback">
+<area shape="rect" id="Node000001" title="Callback function for handling device&#45;specific actions." alt="" coords="5,29,192,55"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html#ae1e53057be9260647796af4b68f35f7b" title="Adds a notification message to the shared notification buffer." alt="" coords="593,5,786,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,26,239,14,328,9,418,7,578,10,578,15,418,12,328,14,240,19,161,31"/>
+<area shape="rect" id="Node000003" href="$class_refrigerator.html#a2544650d8db996b0a00c6f013e622350" title="Retrieves the current stock level of the refrigerator." alt="" coords="599,55,780,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,53,240,65,330,71,422,73,584,70,584,75,422,78,330,76,239,70,160,58"/>
+<area shape="rect" id="Node000004" href="$_refrigerator_8cpp.html#a0ec90129d78ba1f82c421404327502b1" title="Callback function for the stock update button." alt="" coords="240,29,331,55"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,40,224,40,224,45,192,45"/>
+<area shape="rect" id="Node000005" href="$class_refrigerator.html#abc7e2148e42f0a88b0db13959f3f04a4" title="Adjusts the refrigerator&#39;s stock level." alt="" coords="379,29,545,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="332,40,363,40,363,45,332,45"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="546,31,577,27,578,33,546,36"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="546,49,584,53,584,58,546,54"/>
+</map>

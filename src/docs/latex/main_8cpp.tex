@@ -1,0 +1,65 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Entry point for the Smart Home Control Panel application.  
+
+
+{\ttfamily \#include $<$FL/\+Fl.\+H$>$}\newline
+{\ttfamily \#include $<$FL/\+Fl\+\_\+\+Window.\+H$>$}\newline
+{\ttfamily \#include $<$FL/\+Fl\+\_\+\+Box.\+H$>$}\newline
+{\ttfamily \#include $<$FL/\+Fl\+\_\+\+Button.\+H$>$}\newline
+{\ttfamily \#include $<$FL/\+Fl\+\_\+\+Text\+\_\+\+Display.\+H$>$}\newline
+{\ttfamily \#include $<$FL/\+Fl\+\_\+\+Input.\+H$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include "{}Light.\+h"{}}\newline
+{\ttfamily \#include "{}Thermostat.\+h"{}}\newline
+{\ttfamily \#include "{}Curtain.\+h"{}}\newline
+{\ttfamily \#include "{}Security\+Camera.\+h"{}}\newline
+{\ttfamily \#include "{}Water\+Purifier.\+h"{}}\newline
+{\ttfamily \#include "{}Elevator.\+h"{}}\newline
+{\ttfamily \#include "{}Login\+Screen.\+h"{}}\newline
+{\ttfamily \#include "{}Refrigerator.\+h"{}}\newline
+{\ttfamily \#include "{}Main\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}Add\+Device\+Screen.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function for the Smart Home Control Panel application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for the Smart Home Control Panel application. 
+
+This program initializes the login screen, main window, and various smart devices, and provides a user interface to interact with the smart home system. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function for the Smart Home Control Panel application. 
+
+This function initializes the login screen, verifies user authentication, creates instances of various smart devices, and starts the FLTK event loop to handle user interactions.
+
+\begin{DoxyReturn}{Returns}
+int Exit code of the program (0 for successful execution). 
+\end{DoxyReturn}

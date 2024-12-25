@@ -1,0 +1,16 @@
+<map id="SecurityCamera.h" name="SecurityCamera.h">
+<area shape="rect" id="Node000001" title="Header file for the SecurityCamera class, representing a smart security camera device." alt="" coords="387,5,513,31"/>
+<area shape="rect" id="Node000002" href="$_room_8h.html" title="Header file for the Room class, representing rooms in the smart home system." alt="" coords="263,79,330,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,40,324,81,322,76,409,36"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Entry point for the Smart Home Control Panel application." alt="" coords="217,226,291,252"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="456,47,457,77,454,112,445,148,427,180,397,206,361,223,325,233,292,238,291,233,324,228,360,218,394,201,423,177,440,146,449,111,452,77,451,47"/>
+<area shape="rect" id="Node000008" href="$_security_camera_8cpp.html" title="Implementation of the SecurityCamera class, representing a smart security camera device." alt="" coords="488,79,628,105"/>
+<area shape="poly" id="edge6_Node000001_Node000008" title=" " alt="" coords="483,38,541,76,538,81,480,42"/>
+<area shape="rect" id="Node000003" href="$_main_window_8h.html" title="Header file for the MainWindow class, providing the main interface for managing rooms and smart devic..." alt="" coords="5,153,111,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,110,99,155,98,150,247,105"/>
+<area shape="rect" id="Node000006" href="$_remove_room_screen_8cpp.html" title="Implementation of the RemoveRoomScreen class, providing a GUI for removing rooms." alt="" coords="135,153,306,178"/>
+<area shape="poly" id="edge4_Node000002_Node000006" title=" " alt="" coords="275,117,235,154,232,150,271,114"/>
+<area shape="rect" id="Node000007" href="$_room_8cpp.html" title="Implementation of the Room class, representing rooms in the smart home system." alt="" coords="331,153,412,178"/>
+<area shape="poly" id="edge5_Node000002_Node000007" title=" " alt="" coords="322,114,361,150,357,154,318,117"/>
+<area shape="poly" id="edge3_Node000003_Node000005" title=" " alt="" coords="107,182,221,223,220,228,105,187"/>
+</map>

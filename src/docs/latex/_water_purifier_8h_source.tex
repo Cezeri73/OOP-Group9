@@ -1,0 +1,32 @@
+\doxysection{Water\+Purifier.\+h}
+\hypertarget{_water_purifier_8h_source}{}\label{_water_purifier_8h_source}\mbox{\hyperlink{_water_purifier_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ WATERPURIFIER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ WATERPURIFIER\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_smart_device_8h}{SmartDevice.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_water_purifier}{WaterPurifier}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_smart_device}{SmartDevice}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ waterQuality;\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_smart_device_a5a03b30f84a8bfb3f2c69edc7e4e6bb4a642cafd2a7c074657f47f48da3f23cb9}{WaterPurifier}}(\textcolor{keyword}{const}\ std::string\ \&deviceName);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_water_purifier_aa44d7e598f5914061a69a8ffb8a205b0}{\string~WaterPurifier}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_water_purifier_a944ca28c6ab76d74ac6a07f5bd116cbe}{deviceCallback}}(Fl\_Widget\ *,\ \textcolor{keywordtype}{void}\ *)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_water_purifier_a9373d631b7b2615026e96ae575e82be8}{getWaterQuality}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_water_purifier_ad3c347c00c5abadc997efb3aa267d8b1}{decreaseQualityCallback}}(\textcolor{keywordtype}{void}\ *data);}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WATERPURIFIER\_H}}
+
+\end{DoxyCode}

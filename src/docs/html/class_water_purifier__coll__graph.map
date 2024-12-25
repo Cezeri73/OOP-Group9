@@ -1,0 +1,5 @@
+<map id="WaterPurifier" name="WaterPurifier">
+<area shape="rect" id="Node000001" title="Represents a smart water purifier in the smart home system." alt="" coords="5,323,182,471"/>
+<area shape="rect" id="Node000002" href="$class_smart_device.html" title="Abstract base class for all smart devices in the smart home system." alt="" coords="33,5,155,275"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,290,96,324,91,324,91,290"/>
+</map>

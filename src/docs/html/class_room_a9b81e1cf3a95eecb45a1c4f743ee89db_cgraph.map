@@ -1,0 +1,5 @@
+<map id="Room::fromJson" name="Room::fromJson">
+<area shape="rect" id="Node000001" title="Deserializes room data from JSON format." alt="" coords="5,5,124,31"/>
+<area shape="rect" id="Node000002" href="$class_room.html#a23e49c90f9b1ea639f8318c8e90701be" title="Constructor for the Room class." alt="" coords="172,5,271,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
+</map>

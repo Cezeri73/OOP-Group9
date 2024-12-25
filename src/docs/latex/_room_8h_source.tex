@@ -1,0 +1,59 @@
+\doxysection{Room.\+h}
+\hypertarget{_room_8h_source}{}\label{_room_8h_source}\mbox{\hyperlink{_room_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_smart_device_8h}{SmartDevice.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_light_8h}{Light.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <FL/Fl.H>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Window.H>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <FL/Fl\_Button.H>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_add_device_screen_8h}{AddDeviceScreen.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_remove_device_screen_8h}{RemoveDeviceScreen.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_light_8h}{Light.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_thermostat_8h}{Thermostat.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_curtain_8h}{Curtain.h}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_security_camera_8h}{SecurityCamera.h}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_water_purifier_8h}{WaterPurifier.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_elevator_8h}{Elevator.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_refrigerator_8h}{Refrigerator.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ std::vector<SmartDevice\ *>\ devices;\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_add_device_screen}{AddDeviceScreen}}\ ads;\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_remove_device_screen}{RemoveDeviceScreen}}\ rds;\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Room\ *>\ \mbox{\hyperlink{class_room_acb699a54a32f8e66bd312d8be97cbccb}{allRooms}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_add2825ea48f72ca1b06ae26c28297cdc}{roomName}};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_room_a23e49c90f9b1ea639f8318c8e90701be}{Room}}(std::string\ \&name);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_ac2fedceb5afe4ea8dec6414b3d7d72e6}{showRoom}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a1427d03d54ef55b428e06cb470582c89}{addDevice}}(\textcolor{keywordtype}{int}\ selection);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_aa35555c4ffadc737d5f5b7259234e9dc}{removeDevice}}(\textcolor{keywordtype}{int}\ type);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_a7c7022ad3cfa818819ba7ae695433497}{operator==}}(\mbox{\hyperlink{class_room}{Room}}\ \&otherRoom);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \ \ \ \ json\ \mbox{\hyperlink{class_room_a22fcb1266028398aa07a393162954ac8}{toJson}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a9b81e1cf3a95eecb45a1c4f743ee89db}{fromJson}}(\textcolor{keyword}{const}\ json\ \&j);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a1427d03d54ef55b428e06cb470582c89}{addDevice}}(\mbox{\hyperlink{class_smart_device}{SmartDevice}}\ *device);}
+\DoxyCodeLine{00115\ \};}
+
+\end{DoxyCode}
