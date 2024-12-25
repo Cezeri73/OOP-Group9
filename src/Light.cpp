@@ -1,12 +1,29 @@
+/**
+ * @file Light.cpp
+ * @brief Implementation of the Light class, representing a smart light device.
+ */
+
 #include "Light.h"
 
-// Constructor to initialize the Light object
+/**
+ * @brief Constructor for the Light class.
+ * 
+ * Initializes the Light object with a device name and sets the device type to "Light."
+ * 
+ * @param deviceName The name of the light device.
+ */
 Light::Light(const std::string &deviceName) : SmartDevice(deviceName)
 {
     this->type = Type::Light; // Set the device type to "Light"
 }
 
-// Callback function to handle light notifications
+/**
+ * @brief Callback function for handling light notifications.
+ * 
+ * Generates a notification based on the current status of the light (ON or OFF).
+ * 
+ * @param data Pointer to the Light object triggering the callback.
+ */
 void Light::notificationCallback(void *data)
 {
     // Cast the `data` pointer to a `Light` object
@@ -16,7 +33,15 @@ void Light::notificationCallback(void *data)
     light->statu == Statu::ON ? light->addNotification("Light turned ON.") : light->addNotification("Light turned OFF.");
 }
 
-// Callback function for the light button
+/**
+ * @brief Callback function triggered by the light button.
+ * 
+ * Toggles the light's status between ON and OFF, updates the button appearance,
+ * and generates a corresponding notification.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to user-defined data, expected to be a Light object.
+ */
 void Light::deviceCallback(Fl_Widget *widget, void *data)
 {
     // Cast the `data` pointer to a `Light` object
@@ -47,13 +72,17 @@ void Light::deviceCallback(Fl_Widget *widget, void *data)
     button->redraw();
 }
 
-// Turn the light on by changing the status to ON
+/**
+ * @brief Turns the light on by updating its status.
+ */
 void Light::turnOn()
 {
     statu = Statu::ON; // Set the light status to ON
 }
 
-// Turn the light off by changing the status to OFF
+/**
+ * @brief Turns the light off by updating its status.
+ */
 void Light::turnOff()
 {
     statu = Statu::OFF; // Set the light status to OFF

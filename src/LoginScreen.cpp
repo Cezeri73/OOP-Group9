@@ -1,8 +1,18 @@
+/**
+ * @file LoginScreen.cpp
+ * @brief Implementation of the LoginScreen class, providing a GUI for user authentication.
+ */
+
 #include "LoginScreen.h"
 #include <FL/fl_ask.H>
 #include <string>
 
-// Constructor for the LoginScreen class
+/**
+ * @brief Constructor for the LoginScreen class.
+ * 
+ * Initializes the login screen, including the username and password input fields,
+ * and a button to submit the login credentials.
+ */
 LoginScreen::LoginScreen()
 {
     // Create a new window for the login screen
@@ -28,7 +38,15 @@ LoginScreen::LoginScreen()
     Fl::run(); // Start the FLTK event loop
 }
 
-// Static callback function for the login button
+/**
+ * @brief Static callback function for the login button.
+ * 
+ * This function is triggered when the login button is pressed.
+ * It redirects to the `handle_login` method of the LoginScreen object.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to the LoginScreen object.
+ */
 void LoginScreen::login_cb(Fl_Widget *widget, void *data)
 {
     // Cast the data pointer to a LoginScreen object
@@ -36,7 +54,13 @@ void LoginScreen::login_cb(Fl_Widget *widget, void *data)
     screen->handle_login(); // Call the handle_login method
 }
 
-// Handle the login logic when the login button is pressed
+/**
+ * @brief Handles the login logic when the login button is pressed.
+ * 
+ * Verifies the username and password entered by the user. If the credentials
+ * are correct, the user is granted access and the login window is closed.
+ * Otherwise, an error message is displayed.
+ */
 void LoginScreen::handle_login()
 {
     // Get the username and password entered by the user

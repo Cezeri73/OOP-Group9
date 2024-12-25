@@ -1,14 +1,34 @@
+/**
+ * @file Elevator.cpp
+ * @brief Implementation file for the Elevator class, representing a smart elevator device.
+ */
+
 #include "Elevator.h"
 #include <time.h>
 
-// Constructor to initialize the Elevator object
+/**
+ * @brief Constructor for the Elevator class.
+ * 
+ * Initializes the Elevator object with a device name and sets the maintenance
+ * status to false. The device type is set to "Elevator."
+ * 
+ * @param deviceName The name of the elevator device.
+ */
 Elevator::Elevator(const std::string &deviceName)
     : SmartDevice(deviceName), maintenanceRequired(false) // Initialize base class and set maintenance status to false
 {
     this->type = Type::Elevator; // Set the device type to "Elevator"
 }
 
-// Callback function for the elevator button
+/**
+ * @brief Callback function triggered when the elevator button is pressed.
+ * 
+ * Simulates a maintenance check for the elevator. There is an 8% chance that
+ * maintenance is required. Notifications are added based on the result of the check.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to user-defined data, expected to be an Elevator object.
+ */
 void Elevator::deviceCallback(Fl_Widget *widget, void *data)
 {
     // Cast the `data` pointer to an `Elevator` object

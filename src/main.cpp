@@ -1,3 +1,11 @@
+/**
+ * @file main.cpp
+ * @brief Entry point for the Smart Home Control Panel application.
+ * 
+ * This program initializes the login screen, main window, and various smart devices,
+ * and provides a user interface to interact with the smart home system.
+ */
+
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
@@ -21,19 +29,28 @@
 #include "MainWindow.h"
 #include "AddDeviceScreen.h"
 
+/**
+ * @brief Main function for the Smart Home Control Panel application.
+ * 
+ * This function initializes the login screen, verifies user authentication, creates instances
+ * of various smart devices, and starts the FLTK event loop to handle user interactions.
+ * 
+ * @return int Exit code of the program (0 for successful execution).
+ */
 int main()
 {
     // Create an instance of LoginScreen
     LoginScreen screen;
-    
+
     // Create an instance of MainWindow with specific dimensions and title
     MainWindow window(1200, 600, "Smart Home Control Panel");
 
     // Check if the user is authorized (if not, exit the program)
-    if(!screen.authorized){
+    if (!screen.authorized)
+    {
         return 0; // Exit the program if not authorized
     }
-    
+
     // Create instances of different SmartDevices
     SmartDevice *light = new Light("Light");
     SmartDevice *thermostat = new Thermostat("Thermostat", 23);
@@ -48,7 +65,7 @@ int main()
 
     // Set the notification buffer from the SmartDevice class to show messages
     Fl_Text_Buffer *notificationBuffer = SmartDevice::notificationBuffer;
-    
+
     // Associate the notification buffer with the text display widget
     notificationDisplay->buffer(notificationBuffer);
 

@@ -1,16 +1,33 @@
+/**
+ * @file MainWindow.cpp
+ * @brief Implementation of the MainWindow class, providing the main interface for managing rooms and smart devices.
+ */
+
 #include "MainWindow.h"
 
 // Define a static instance of the AddRoomScreen
 AddRoomScreen MainWindow::addRoomScreen;
 RemoveRoomScreen MainWindow::removeRoomScreen;
 
-// Constructor for the MainWindow class
+/**
+ * @brief Constructor for the MainWindow class.
+ * 
+ * Initializes the main window with a specified width, height, and title, and loads program data from a file.
+ * 
+ * @param w Width of the window.
+ * @param h Height of the window.
+ * @param name Title of the window.
+ */
 MainWindow::MainWindow(int w, int h, const char *name) : Fl_Window(w, h, name)
 {
     loadProgram(); // Load the program's data (rooms) from a file
 };
 
-// Save the current state of the program to a file
+/**
+ * @brief Saves the current state of the program to a file.
+ * 
+ * Converts all rooms to JSON format and writes the data to a file named "saveFile."
+ */
 void MainWindow::saveProgram()
 {
     json allRoomsJson = json::array(); // Create a JSON array to store room data
@@ -31,7 +48,12 @@ void MainWindow::saveProgram()
     }
 }
 
-// Load the program's state from a file
+/**
+ * @brief Loads the program's state from a file.
+ * 
+ * Reads JSON data from the file "saveFile" and recreates the rooms in the program.
+ * If the file cannot be opened, an error message is displayed.
+ */
 void MainWindow::loadProgram()
 {
     std::ifstream inFile("saveFile"); // Open the file for reading
@@ -52,7 +74,12 @@ void MainWindow::loadProgram()
     updateButtons(); // Update the UI to reflect the loaded data
 }
 
-// Update the UI with room buttons and controls
+/**
+ * @brief Updates the UI with room buttons and controls.
+ * 
+ * Clears the current window and repopulates it with updated room data,
+ * including buttons for each room and system notifications.
+ */
 void MainWindow::updateButtons()
 {
     Fl_Window::hide(); // Hide the window temporarily
@@ -62,17 +89,18 @@ void MainWindow::updateButtons()
     // Retrieve all rooms from the program's data
     std::vector<Room *> rooms = Room::allRooms;
 
-	removeRoomButton = new Fl_Button(900, 60, 200,30 ,"Remove Room");
-	removeRoomButton->callback([](Fl_Widget *widget, void *data)
-							{
-		MainWindow* mw = static_cast<MainWindow*>(data);
-		removeRoomScreen.show();
-		while(removeRoomScreen.shown()){
-			Fl::wait();
-		}
-		mw->updateButtons(); }, this);
-	
-	    // Add a button for adding new rooms
+    // Add a button for removing rooms
+    removeRoomButton = new Fl_Button(900, 60, 200, 30, "Remove Room");
+    removeRoomButton->callback([](Fl_Widget *widget, void *data)
+                                {
+        MainWindow* mw = static_cast<MainWindow*>(data);
+        removeRoomScreen.show();
+        while(removeRoomScreen.shown()){
+            Fl::wait();
+        }
+        mw->updateButtons(); }, this);
+
+    // Add a button for adding new rooms
     addRoomButton = new Fl_Button(900, 20, 200, 30, "Add Room");
     addRoomButton->callback([](Fl_Widget *widget, void *data)
                             {
@@ -110,7 +138,11 @@ void MainWindow::updateButtons()
     this->show(); // Show the updated window
 }
 
-// Override the hide method to save the program state before hiding the window
+/**
+ * @brief Saves the program state before hiding the window.
+ * 
+ * Overrides the default hide method to ensure the program's data is saved to a file.
+ */
 void MainWindow::hide()
 {
     this->saveProgram(); // Save the program's data to the file

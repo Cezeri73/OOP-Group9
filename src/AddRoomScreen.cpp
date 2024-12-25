@@ -1,55 +1,55 @@
-#include "AddRoomScreen.h"
-#include "Room.h"
+/**
+ * @file AddRoomScreen.cpp
+ * @brief Implementation of the AddRoomScreen class.
+ */
 
-// Constructor to initialize the Add Room Screen
+#include "AddRoomScreen.h"
+
+/**
+ * @brief Constructor to initialize the Add Room Screen components.
+ */
 AddRoomScreen::AddRoomScreen()
 {
-    // Create a new window for adding a room
-    window = new Fl_Window(300, 200, "Login Screen");
-
-    // Create a label and input field for entering the room name
-    new Fl_Box(20, 30, 80, 30, "Room Name:"); // Label for the input field
-    roomName = new Fl_Input(110, 30, 150, 30); // Input field for room name
-
-    // Create an "Enter" button for confirming the room addition
-    button = new Fl_Button(110, 130, 80, 30, "Enter");
-    button->callback(login_cb, this); // Set the callback function for the button
-
-    // Finalize and display the window
+    window = new Fl_Window(340, 220, "Add Room");
+    roomName = new Fl_Input(120, 90, 210, 25, "Room Name:");
+    button = new Fl_Button(200, 160, 100, 25, "Enter");
+    button->callback(login_cb, this);
     window->end();
 }
 
-// Method to show the Add Room Screen
+/**
+ * @brief Displays the Add Room Screen to the user.
+ */
 void AddRoomScreen::show()
 {
-    window->show(); // Display the window
+    window->show();
 }
 
-// Method to check if the window is currently visible
+/**
+ * @brief Checks if the Add Room Screen is visible.
+ * @return True if the screen is visible, false otherwise.
+ */
 bool AddRoomScreen::shown()
 {
-    return window->visible(); // Return the visibility status of the window
+    return window->shown();
 }
 
-// Callback function for the "Enter" button
+/**
+ * @brief Callback function triggered when the "Enter" button is clicked.
+ * @param widget Pointer to the button widget.
+ * @param data Pointer to user-defined data.
+ */
 void AddRoomScreen::login_cb(Fl_Widget *widget, void *data)
 {
-    AddRoomScreen *screen = (AddRoomScreen *)data; // Cast the data to AddRoomScreen
-    screen->handle_login(); // Call the handle_login method
+    AddRoomScreen *self = static_cast<AddRoomScreen *>(data);
+    self->handle_login();
 }
 
-// Method to handle the addition of a room
+/**
+ * @brief Handles the logic when the "Enter" button is clicked.
+ */
 void AddRoomScreen::handle_login()
 {
-    // Get the room name entered by the user
-    std::string roomNameStr = roomName->value();
-
-    // Create a new Room object with the entered name
-    Room *roomToAdd = new Room(roomNameStr);
-
-    // Log the room name to the console for debugging
-    std::cout << roomNameStr;
-
-    // Hide the window after adding the room
+    fl_alert("Room name: %s", roomName->value());
     window->hide();
 }

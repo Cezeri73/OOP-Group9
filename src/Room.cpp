@@ -1,29 +1,45 @@
+/**
+ * @file Room.cpp
+ * @brief Implementation of the Room class, representing rooms in the smart home system.
+ */
+
 #include "Room.h"
 
 // Static vector to hold all room instances
 std::vector<Room *> Room::allRooms;
 
-// Constructor for Room, initializes with a name and adds to the list of all rooms
+/**
+ * @brief Constructor for the Room class.
+ * 
+ * Initializes a room with a given name and adds it to the list of all rooms.
+ * 
+ * @param name The name of the room.
+ */
 Room::Room(std::string &name) : roomName(name)
 {
     allRooms.push_back(this); // Adds the current room to the global list of rooms
 }
 
-// Method to display the room interface
+/**
+ * @brief Displays the room interface.
+ * 
+ * Creates a window for the room, allowing the user to manage devices, add timers, and more.
+ */
 void Room::showRoom()
 {
     std::string name = roomName;
-    
+
     // Create a window to display room details
     Fl_Window *roomWindow = new Fl_Window(400, 400, name.c_str());
-    
+
     // Create buttons for different actions in the room
     Fl_Button *removeDeviceButton = new Fl_Button(100, 60, 200, 30, "Remove Device");
     Fl_Button *addTimerButton = new Fl_Button(100, 100, 200, 30, "Add Timer");
 
     // Button to add a new device to the room
     Fl_Button *addDeviceButton = new Fl_Button(100, 20, 200, 30, "Add Device");
-    // Set callback for adding device to the room
+
+    // Set callback for adding a device to the room
     addDeviceButton->callback([](Fl_Widget *widget, void *data)
                               {
         Fl_Window *parent_window = widget->window(); // Hide the current window
@@ -32,7 +48,7 @@ void Room::showRoom()
         Room *r = static_cast<Room*>(data);
         r->ads.show(); // Show the add device screen
         while (r->ads.shown()) {
-            Fl::wait(); // Wait for the add device window to be closed
+            Fl::wait(); // Wait for the add device window to close
         }
         r->addDevice(r->ads.choice->value()); // Add the selected device
         r->showRoom(); // Re-show the room interface
@@ -48,7 +64,7 @@ void Room::showRoom()
         Room *r = static_cast<Room*>(data);
         r->rds.show(); // Show the remove device screen
         while (r->rds.shown()) {
-            Fl::wait(); // Wait for the remove device window to be closed
+            Fl::wait(); // Wait for the remove device window to close
         }
         r->removeDevice(r->rds.choice->value()); // Remove the selected device
         r->showRoom(); // Re-show the room interface
@@ -156,7 +172,11 @@ void Room::showRoom()
     roomWindow->show(); // Show the room window with all devices
 }
 
-// Adds a new device to the room based on user selection
+/**
+ * @brief Adds a new device to the room based on user selection.
+ * 
+ * @param selection Index of the selected device type from the UI.
+ */
 void Room::addDevice(int selection)
 {
     SmartDevice *device;
@@ -192,7 +212,11 @@ void Room::addDevice(int selection)
     devices.push_back(device); // Add the new device to the room
 }
 
-// Removes a device from the room by its type
+/**
+ * @brief Removes a device from the room by its type.
+ * 
+ * @param type Type of the device to remove.
+ */
 void Room::removeDevice(int type)
 {
     // Iterate through devices in reverse order to avoid invalidating the vector during removal
@@ -206,19 +230,32 @@ void Room::removeDevice(int type)
     }
 }
 
-// Adds a device directly to the room (used by JSON deserialization)
+/**
+ * @brief Adds a device directly to the room (used by JSON deserialization).
+ * 
+ * @param device Pointer to the SmartDevice to add.
+ */
 void Room::addDevice(SmartDevice *device)
 {
     devices.push_back(device); // Add the device to the room
 }
 
-// Equality operator to compare rooms by name
+/**
+ * @brief Equality operator to compare rooms by name.
+ * 
+ * @param otherRoom The other room to compare with.
+ * @return True if the room names are equal, false otherwise.
+ */
 bool Room::operator==(Room &otherRoom)
 {
     return roomName == otherRoom.roomName; // Compare rooms based on their names
 }
 
-// Serializes the room data to JSON format
+/**
+ * @brief Serializes the room data to JSON format.
+ * 
+ * @return JSON representation of the room and its devices.
+ */
 json Room::toJson() const
 {
     json deviceArray = json::array();
@@ -229,7 +266,11 @@ json Room::toJson() const
     return json{{"roomName", roomName}, {"devices", deviceArray}}; // Return room and devices as JSON
 }
 
-// Deserializes room data from JSON format
+/**
+ * @brief Deserializes room data from JSON format.
+ * 
+ * @param j JSON representation of the room.
+ */
 void Room::fromJson(const json &j)
 {
     std::string roomName = j.at("roomName").get<std::string>();

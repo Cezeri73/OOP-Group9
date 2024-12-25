@@ -1,6 +1,19 @@
+/**
+ * @file Refrigerator.cpp
+ * @brief Implementation of the Refrigerator class, representing a smart refrigerator device.
+ */
+
 #include "Refrigerator.h"
 
-// Constructor for the Refrigerator class
+/**
+ * @brief Constructor for the Refrigerator class.
+ * 
+ * Initializes the refrigerator with a given device name and initial stock level.
+ * Sets the device type to "Refrigerator."
+ * 
+ * @param deviceName The name of the refrigerator device.
+ * @param initialStock The initial stock level in the refrigerator.
+ */
 Refrigerator::Refrigerator(const std::string &deviceName, int initialStock)
     : SmartDevice(deviceName)
 {
@@ -8,7 +21,14 @@ Refrigerator::Refrigerator(const std::string &deviceName, int initialStock)
     this->type = Type::Refrigerator; // Set the device type to "Refrigerator"
 }
 
-// Callback function for the stock update button
+/**
+ * @brief Callback function for the stock update button.
+ * 
+ * Updates the stock level of the refrigerator based on the user's input.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to the Refrigerator object.
+ */
 void stockButton(Fl_Widget *widget, void *data)
 {
     Refrigerator *fridge = static_cast<Refrigerator *>(data); // Cast the data pointer to a Refrigerator object
@@ -18,7 +38,14 @@ void stockButton(Fl_Widget *widget, void *data)
     fridge->adjustStock(newStock); // Update the stock level in the refrigerator
 }
 
-// Callback function for the refrigerator's device-specific actions
+/**
+ * @brief Callback function for the refrigerator's device-specific actions.
+ * 
+ * Displays notifications about the stock level and opens a window for updating the stock level.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to the Refrigerator object.
+ */
 void Refrigerator::deviceCallback(Fl_Widget *widget, void *data)
 {
     Refrigerator *fridge = static_cast<Refrigerator *>(data); // Cast the data pointer to a Refrigerator object
@@ -43,7 +70,12 @@ void Refrigerator::deviceCallback(Fl_Widget *widget, void *data)
     fridgeWindow->show(); // Display the window
 }
 
-// Check the stock level and update the status
+/**
+ * @brief Checks the stock level and updates the refrigerator's status.
+ * 
+ * If the stock is below 5 units, the status is set to "Low Stock."
+ * Otherwise, it is set to "Sufficient Stock."
+ */
 void Refrigerator::checkStock()
 {
     if (stockLevel < 5) // If stock is below 5 units
@@ -56,7 +88,14 @@ void Refrigerator::checkStock()
     }
 }
 
-// Adjust the refrigerator's stock level
+/**
+ * @brief Adjusts the refrigerator's stock level.
+ * 
+ * Sets the stock level to the specified amount and ensures it is non-negative.
+ * Generates a notification about the updated stock level and checks the stock status.
+ * 
+ * @param amount The new stock level to set.
+ */
 void Refrigerator::adjustStock(int amount)
 {
     stockLevel = amount; // Set the stock level to the given amount
@@ -69,7 +108,11 @@ void Refrigerator::adjustStock(int amount)
     checkStock(); // Check the stock level and update the status
 }
 
-// Get the current stock level of the refrigerator
+/**
+ * @brief Gets the current stock level of the refrigerator.
+ * 
+ * @return The current stock level.
+ */
 int Refrigerator::getStockLevel() const
 {
     return stockLevel; // Return the current stock level

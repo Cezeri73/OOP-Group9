@@ -1,25 +1,48 @@
+/**
+ * @file Curtain.cpp
+ * @brief Implementation of the Curtain class, representing a smart curtain device.
+ */
+
 #include "Curtain.h"
 
-// Constructor to initialize the Curtain object
+/**
+ * @brief Constructor for the Curtain class.
+ * 
+ * Initializes the Curtain object with a device name and sets the device type to "Curtain."
+ * 
+ * @param deviceName The name of the curtain device.
+ */
 Curtain::Curtain(const std::string &deviceName)
 	: SmartDevice(deviceName) // Initialize base class with device name
 {
 	this->type = Type::Curtain; // Set the device type to "Curtain"
 }
 
-// Method to open the curtain
+/**
+ * @brief Opens the curtain by updating its status to ON.
+ */
 void Curtain::openCurtain()
 {
 	statu = Statu::ON; // Update the status to ON (open)
 }
 
-// Method to close the curtain
+/**
+ * @brief Closes the curtain by updating its status to OFF.
+ */
 void Curtain::closeCurtain()
 {
 	statu = Statu::OFF; // Update the status to OFF (closed)
 }
 
-// Callback function for the curtain button
+/**
+ * @brief Callback function for the curtain button.
+ * 
+ * Toggles the curtain's status between open and closed. Updates the button appearance
+ * and adds a corresponding notification for the action performed.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to user-defined data, expected to be a Curtain object.
+ */
 void Curtain::deviceCallback(Fl_Widget *widget, void *data)
 {
 	// Cast the `data` pointer to a `Curtain` object

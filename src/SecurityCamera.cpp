@@ -1,12 +1,31 @@
+/**
+ * @file SecurityCamera.cpp
+ * @brief Implementation of the SecurityCamera class, representing a smart security camera device.
+ */
+
 #include "SecurityCamera.h"
 
-// Constructor to initialize the security camera and set its type
+/**
+ * @brief Constructor for the SecurityCamera class.
+ * 
+ * Initializes a security camera device with a given name and sets its type to "Security Camera."
+ * 
+ * @param deviceName The name of the security camera device.
+ */
 SecurityCamera::SecurityCamera(const std::string &deviceName) : SmartDevice(deviceName)
 {
     this->type = Type::SecurityCamera; // Set the device type as Security Camera
 }
 
-// Callback method triggered when the camera's associated button is clicked
+/**
+ * @brief Callback method triggered when the camera's associated button is clicked.
+ * 
+ * Toggles the security camera between recording and not recording, updates the button appearance, 
+ * and adds a notification about the action performed.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to user-defined data, expected to be a SecurityCamera object.
+ */
 void SecurityCamera::deviceCallback(Fl_Widget *widget, void *data)
 {
     SecurityCamera *camera = static_cast<SecurityCamera *>(data); // Cast the data pointer to a SecurityCamera object
@@ -28,13 +47,17 @@ void SecurityCamera::deviceCallback(Fl_Widget *widget, void *data)
     }
 }
 
-// Method to start recording and change the camera's status to ON
+/**
+ * @brief Starts recording and updates the camera's status to ON.
+ */
 void SecurityCamera::startRecording()
 {
     statu = Statu::ON; // Update the status to ON
 }
 
-// Method to stop recording and change the camera's status to OFF
+/**
+ * @brief Stops recording and updates the camera's status to OFF.
+ */
 void SecurityCamera::stopRecording()
 {
     statu = Statu::OFF; // Update the status to OFF

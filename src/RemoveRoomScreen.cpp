@@ -1,7 +1,17 @@
+/**
+ * @file RemoveRoomScreen.cpp
+ * @brief Implementation of the RemoveRoomScreen class, providing a GUI for removing rooms.
+ */
+
 #include "RemoveRoomScreen.h"
 #include "Room.h"
 
-// Constructor to initialize the RemoveRoomScreen
+/**
+ * @brief Constructor for the RemoveRoomScreen class.
+ * 
+ * Initializes the GUI components, including an input field for the room name
+ * and a button to confirm the removal action.
+ */
 RemoveRoomScreen::RemoveRoomScreen()
 {
     // Create a window with dimensions 300x200 and a title "Remove Room"
@@ -23,19 +33,34 @@ RemoveRoomScreen::RemoveRoomScreen()
     window->end();
 }
 
-// Show the window to the user
+/**
+ * @brief Displays the Remove Room Screen.
+ * 
+ * This method shows the window to the user.
+ */
 void RemoveRoomScreen::show()
 {
     window->show(); // Display the window
 }
 
-// Return whether the window is currently visible
+/**
+ * @brief Checks if the Remove Room Screen is currently visible.
+ * 
+ * @return True if the screen is visible, false otherwise.
+ */
 bool RemoveRoomScreen::shown()
 {
     return window->visible(); // Check if the window is currently visible
 }
 
-// Callback function when the "Enter" button is clicked
+/**
+ * @brief Callback function triggered when the "Enter" button is clicked.
+ * 
+ * Calls the `handle_login` method to process the room removal logic.
+ * 
+ * @param widget Pointer to the widget triggering the callback.
+ * @param data Pointer to user-defined data, expected to be a RemoveRoomScreen object.
+ */
 void RemoveRoomScreen::login_cb(Fl_Widget *widget, void *data)
 {
     // Cast the data back to the RemoveRoomScreen object
@@ -45,16 +70,23 @@ void RemoveRoomScreen::login_cb(Fl_Widget *widget, void *data)
     screen->handle_login();
 }
 
-// Handle the logic of removing a room
+/**
+ * @brief Handles the logic for removing a room.
+ * 
+ * Retrieves the room name entered by the user and removes the corresponding
+ * room from the list of all rooms. The screen is hidden after the operation is complete.
+ */
 void RemoveRoomScreen::handle_login()
 {
     // Get the room name entered by the user in the input field
     std::string roomNameStr = roomName->value();
 
     // Iterate through the list of all rooms and find the room to remove
-    for(int i = Room::allRooms.size() - 1; i >= 0; i--) {
+    for (int i = Room::allRooms.size() - 1; i >= 0; i--)
+    {
         // If the room name matches the entered name, remove the room from the list
-        if(Room::allRooms[i]->roomName == roomNameStr){
+        if (Room::allRooms[i]->roomName == roomNameStr)
+        {
             Room::allRooms.erase(Room::allRooms.begin() + i); // Remove room from vector
             break; // Exit the loop after the room is removed
         }

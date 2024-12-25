@@ -1,6 +1,20 @@
+/**
+ * @file Thermostat.cpp
+ * @brief Implementation of the Thermostat class, representing a smart thermostat device.
+ */
+
 #include "Thermostat.h"
 #include <FL/Fl_Value_Output.H>
 
+/**
+ * @brief Constructor for the Thermostat class.
+ * 
+ * Initializes the thermostat with a given name and an initial temperature.
+ * Sets the device type to "Thermostat."
+ * 
+ * @param deviceName The name of the thermostat device.
+ * @param initialTemp The initial temperature of the thermostat (default is 22°C).
+ */
 // Constructor to initialize the Thermostat object
 Thermostat::Thermostat(const std::string &deviceName, int initialTemp = 22)
     : SmartDevice(deviceName)

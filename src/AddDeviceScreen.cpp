@@ -1,51 +1,56 @@
+/**
+ * @file AddDeviceScreen.cpp
+ * @brief Implementation of the AddDeviceScreen class.
+ */
+
 #include "AddDeviceScreen.h"
 
-// Constructor to initialize the Add Device Screen
+/**
+ * @brief Constructor to initialize the Add Device Screen components.
+ */
 AddDeviceScreen::AddDeviceScreen()
 {
-    // Create a new window for adding devices
-    window = new Fl_Window(300, 200, "Device Add Screen");
-
-    // Create a dropdown (choice) widget to select device type
-    choice = new Fl_Choice(100, 50, 100, 30);
-    choice->add("Refrigerator");   // Add Refrigerator option
-    choice->add("Thermostat");     // Add Thermostat option
-    choice->add("Light");          // Add Light option
-    choice->add("WaterPurifier");  // Add Water Purifier option
-    choice->add("Elevator");       // Add Elevator option
-    choice->add("Curtain");        // Add Curtain option
-    choice->add("Camera");         // Add Camera option
-
-    // Create an "Enter" button for confirming the device selection
-    button = new Fl_Button(110, 130, 80, 30, "Enter");
-    button->callback(login_cb, this); // Set the callback function for the button
-
-    // Finalize and display the window
+    window = new Fl_Window(340, 220, "Add Device");
+    choice = new Fl_Choice(120, 90, 210, 25, "Device Type:");
+    choice->add("Light|Curtain|Thermostat|Security Camera|Refrigerator|Elevator|Water Purifier");
+    button = new Fl_Button(200, 160, 100, 25, "Enter");
+    button->callback(login_cb, this);
     window->end();
 }
 
-// Method to show the Add Device Screen
+/**
+ * @brief Displays the Add Device Screen to the user.
+ */
 void AddDeviceScreen::show()
 {
-    window->show(); // Display the window
+    window->show();
 }
 
-// Method to check if the window is currently visible
+/**
+ * @brief Checks if the Add Device Screen is visible.
+ * @return True if the screen is visible, false otherwise.
+ */
 bool AddDeviceScreen::shown()
 {
-    return window->visible(); // Return the visibility status of the window
+    return window->shown();
 }
 
-// Callback function for the "Enter" button
+/**
+ * @brief Callback function triggered when the "Enter" button is clicked.
+ * @param widget Pointer to the button widget.
+ * @param data Pointer to user-defined data.
+ */
 void AddDeviceScreen::login_cb(Fl_Widget *widget, void *data)
 {
-    // Close the parent window when the button is clicked
-    Fl_Window *parent_window = widget->window();
-    parent_window->hide();
+    AddDeviceScreen *self = static_cast<AddDeviceScreen *>(data);
+    self->handle_login();
 }
 
-// Placeholder for handling login (not implemented)
+/**
+ * @brief Handles the logic when the "Enter" button is clicked.
+ */
 void AddDeviceScreen::handle_login()
 {
-    // Functionality to handle login (if needed) can be added here
+    fl_alert("Device type: %s", choice->text());
+    window->hide();
 }
