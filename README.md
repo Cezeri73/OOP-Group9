@@ -37,3 +37,15 @@ and the project was completed in a timely manner. So we can say Each member take
 Feel free to explore, contribute, and enjoy coding with C++! 💻✨
 
 Program Demo Video: https://youtu.be/huvRwzfABwk
+
+**Installation**
+
+_Clone the Repository_
+Download the project from github:
+
+''''git clone https://github.com/Cezeri73/OOP-Group9.git
+cd OOP-Group9
+make''''
+
+-For windows run smart_home.exe
+-For Linux run ./smarthome on shell
