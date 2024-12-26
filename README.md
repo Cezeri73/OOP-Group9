@@ -38,9 +38,10 @@ Feel free to explore, contribute, and enjoy coding with C++! 💻✨
 
 Program Demo Video: https://youtu.be/huvRwzfABwk
 
-**Installation**
+## Installation
 
 _Clone the Repository_
+
 Download the project from github:
 
 ```
