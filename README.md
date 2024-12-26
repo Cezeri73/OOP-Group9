@@ -43,11 +43,11 @@ Program Demo Video: https://youtu.be/huvRwzfABwk
 _Clone the Repository_
 Download the project from github:
 
-""git clone https://github.com/Cezeri73/OOP-Group9.git
-
+```
+git clone https://github.com/Cezeri73/OOP-Group9.git
 cd OOP-Group9
-
-make""
+make
+```
 
 -For windows run smart_home.exe
 
